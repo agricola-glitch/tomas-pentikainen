@@ -173,6 +173,15 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
 .wall .bt.big img{max-width:none;max-height:none;height:clamp(34px,3.4vw,48px);width:auto;opacity:1}
 .wall .bt.big{font-size:clamp(18px,1.9vw,26px)}
 .shel{filter:brightness(0);opacity:.87}
+.media.split{display:grid;grid-template-columns:1fr 1fr;place-items:stretch}
+.media.split::after{display:none}
+.media.split .half{display:grid;place-items:center;position:relative;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.media.split .cm{background:linear-gradient(135deg,#0c4a6e 0%,#0284c7 60%,#38bdf8 100%)}
+.media.split .br{background:#fafafa;border-left:1px solid rgba(10,10,10,.06)}
+.media.split .cm img{max-width:72%;max-height:none;height:auto}
+.media.split .br .bt{font-size:clamp(17px,1.6vw,22px)}
+.media.split .br .bt img{height:clamp(30px,2.6vw,40px);width:auto;max-width:none;max-height:none}
+.card:hover .media.split .half{transform:scale(1.03)}
 /* reveal */
 .rv{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
 .rv.in{opacity:1;transform:none}
@@ -234,17 +243,17 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
         <ul class="tags"><li>SEO</li><li>Content strategy</li><li>YMYL</li></ul>
       </a>
       <a class="card rv" href="#case-coinmotion">
-        <div class="media"><div class="bg" style="background:linear-gradient(135deg,#f5f5f7 0%,#e0f2fe 60%,#fde7d4 100%)"></div><div class="duo"><img src="logo-coinmotion.svg" alt="Coinmotion" width="1000" height="250" style="height:44px;width:auto;max-width:none;max-height:none"><span class="plus">&amp;</span><span class="bt"><img src="logo-bittiraha.png" alt="" width="115" height="139" style="height:40px;width:auto;max-width:none;max-height:none">Bittiraha</span></div></div>
+        <div class="media split"><div class="half cm"><img src="logo-coinmotion.png" alt="Coinmotion" width="535" height="68"></div><div class="half br"><span class="bt"><img src="logo-bittiraha.png" alt="" width="115" height="139">Bittiraha</span></div></div>
         <h3>Coinmotion &amp; Bittiraha</h3><p>Getting recommended by ChatGPT and AI Overviews, not just ranked by Google</p>
         <ul class="tags"><li>GEO</li><li>AI Overviews</li><li>ChatGPT</li></ul>
       </a>
       <a class="card rv" href="#case-restaurants">
-        <div class="media"><div class="bg" style="background:linear-gradient(135deg,#14302a 0%,#2f6b5a 55%,#a7f3d0 100%)"></div><img src="logo-shelter.png" alt="Shelter" width="750" height="225"></div>
+        <div class="media"><div class="bg" style="background:radial-gradient(120% 90% at 70% 10%,#3a3b39 0%,#202120 55%,#121312 100%)"></div><img src="logo-shelter.png" alt="Shelter" width="750" height="225"></div>
         <h3>Shelter</h3><p>A MICHELIN Guide restaurant on the Katajanokka waterfront</p>
         <ul class="tags"><li>Local SEO</li><li>Localisation</li><li>Reporting</li></ul>
       </a>
       <a class="card rv" href="#case-restaurants">
-        <div class="media"><div class="bg" style="background:linear-gradient(135deg,#035480 0%,#0ea5e9 60%,#e0f2fe 100%)"></div><img class="wht" src="logo-teller.svg" alt="Teller" width="350" height="167" style="max-height:40%"></div>
+        <div class="media"><div class="bg" style="background:radial-gradient(120% 90% at 70% 10%,#6a2a2c 0%,#461c1d 55%,#2c1112 100%)"></div><img src="logo-teller-yellow.svg" alt="Teller" width="350" height="167" style="max-height:40%"></div>
         <h3>Teller</h3><p>No. 16 on Finland's 50 Best Restaurants 2026</p>
         <ul class="tags"><li>Local SEO</li><li>Finnish meta</li><li>GA4 / GSC</li></ul>
       </a>
@@ -266,9 +275,9 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
   <div class="wrap">
     <div class="statement"><h2 id="num-h" class="rv">A few numbers I can share <strong>in public</strong>.</h2></div>
     <div class="numbers rv">
-      <div><b>+76%</b><span>non-branded Google clicks in a year at Coinmotion</span></div>
-      <div><b>3 → 1</b><span>from page three to page one, ahead of every Finnish competitor</span></div>
-      <div><b>#1</b><span>brand ChatGPT usually names first for "best crypto service"</span></div>
+      <div><b>+76%</b><span>non-branded Google clicks in a single year</span></div>
+      <div><b>3 → 1</b><span>from page three to page one, ahead of every competitor</span></div>
+      <div><b>#1</b><span>the brand ChatGPT usually names first in its category</span></div>
     </div>
     <p class="note rv">Full numbers and case details on request.</p>
   </div>
@@ -307,7 +316,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
     </article>
 
     <article class="panel rv" id="case-restaurants">
-      <div class="visual" style="background:linear-gradient(135deg,#14302a 0%,#2f6b5a 50%,#0ea5e9 100%)"><div class="mark">Shelter<br>&amp; Teller</div></div>
+      <div class="visual" style="background:linear-gradient(135deg,#202120 0%,#2c1a1a 55%,#461c1d 100%)"><div class="mark">Shelter<br><span style="color:#ecfe52">&amp; Teller</span></div></div>
       <div>
         <blockquote>"Acclaimed kitchens, English-first websites, and guests searching in Finnish."</blockquote>
         <p class="by">Shelter (MICHELIN Guide) &amp; Teller (No. 16, Finland's 50 Best 2026)<br>Freelance through my own company</p>
@@ -365,7 +374,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
       <ul class="tl">
         <li><span class="when">2022 – now</span><div><b>Content Strategist · Coinmotion</b><span>Content strategy, SEO, GEO and creators across five markets, plus sister site Bittiraha</span></div><div class="lg"><img src="logo-coinmotion.svg" alt="Coinmotion" width="1000" height="250" style="max-height:26px;max-width:84px"></div></li>
         <li><span class="when">2025 – 2026</span><div><b>Freelance SEO &amp; Content Lead</b><span>Shelter and Teller, through my own company</span></div><div class="lg"><img class="shel" src="logo-shelter.png" alt="Shelter" width="750" height="225" style="max-height:18px;max-width:52px"><img src="logo-teller.svg" alt="Teller" width="350" height="167" style="max-height:20px;max-width:42px"></div></li>
-        <li><span class="when">2021 – 2022</span><div><b>Content Specialist · Resulta</b><span>SEO-led content, WordPress, Semrush</span></div><div class="lg"><span style="font-weight:600;font-size:15px;letter-spacing:-.01em">Resulta</span></div></li>
+        <li><span class="when">2021 – 2022</span><div><b>Content Specialist · Resulta</b><span>SEO-led content, WordPress, Semrush</span></div><div class="lg"><img src="logo-resulta.svg" alt="Resulta" width="200" height="200" style="max-height:30px;border-radius:3px"></div></li>
         <li><span class="when">2020 – 2021</span><div><b>Freelance Writer · Kantar UK</b><span>Search-optimised articles, youth rebrand for Essity</span></div><div class="lg"><img src="logo-kantar.png" alt="Kantar" width="450" height="86" style="max-height:14px"></div></li>
         <li><span class="when">2018 – 2020</span><div><b>Copywriter → Digital Marketing Executive · JD Sports / size?</b><span>Amsterdam · copywriter for JD Sports Finland, then Digital Marketing Executive leading the size? Finland launch</span></div><div class="lg"><img src="logo-jd.svg" alt="JD Sports" width="316" height="316" style="max-height:26px"><img src="logo-size.png" alt="size?" width="640" height="234" style="max-height:16px;max-width:48px"></div></li>
         <li><span class="when">2017</span><div><b>Netflix</b><span>Amsterdam · global customer service, 97% satisfaction</span></div><div class="lg"><img src="logo-netflix.svg" alt="Netflix" width="1024" height="277" style="max-height:20px"></div></li>
