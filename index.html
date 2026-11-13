@@ -230,6 +230,11 @@ html,body{overflow-x:hidden}
 .feature .ic{flex:none;display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:var(--ink);color:#fff}
 .feature b{display:block;font-weight:600;font-size:20px;letter-spacing:-.02em}
 .feature span{display:block;color:var(--ink-50);font-size:15px;line-height:1.4}
+.card .media .stack{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:16px;width:100%}
+.card .media .stack>img{max-width:46%;max-height:none;height:auto}
+.card .media .stack .sep{width:40px;height:1px;background:rgba(255,255,255,.45)}
+.card .media .stack .bt.w{color:#fff;font-size:clamp(17px,1.6vw,22px)}
+.card .media .stack .bt.w img{height:clamp(26px,2.3vw,34px);width:auto;max-width:none;max-height:none}
 /* reveal */
 .rv{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
 .rv.in{opacity:1;transform:none}
@@ -291,7 +296,7 @@ html,body{overflow-x:hidden}
         <ul class="tags"><li>SEO</li><li>Content strategy</li><li>Creators</li></ul>
       </a>
       <a class="card rv" href="#case-coinmotion">
-        <div class="media split"><div class="half cm"><img src="logo-coinmotion.png" alt="Coinmotion" width="535" height="68"></div><div class="half br"><span class="bt"><img src="logo-bittiraha.png" alt="" width="115" height="139">Bittiraha</span></div></div>
+        <div class="media"><div class="bg" style="background:linear-gradient(135deg,#0c4a6e 0%,#0284c7 55%,#7dd3fc 100%)"></div><div class="stack"><img src="logo-coinmotion.png" alt="Coinmotion" width="535" height="68"><span class="sep" aria-hidden="true"></span><span class="bt w"><img src="logo-bittiraha.png" alt="" width="115" height="139">Bittiraha</span></div></div>
         <h3>Coinmotion &amp; Bittiraha</h3><p>Search and AI visibility for two Finnish crypto brands</p>
         <ul class="tags"><li>GEO</li><li>AI search</li><li>Content</li></ul>
       </a>
