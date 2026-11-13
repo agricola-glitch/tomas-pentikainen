@@ -21,10 +21,12 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&display=swap" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
 <style>
 :root{
-  --ink:#0a0a0a;--ink-50:rgba(10,10,10,.52);--line:rgba(10,10,10,.1);
+  --ink:#0a0a0a;--ink-50:rgba(10,10,10,.64);--line:rgba(10,10,10,.1);
   --bg:#fff;--light:#f5f5f7;--soft:#ececec;--black:#0a0a0a;
   --sky:#0ea5e9;--sky-ink:#0369a1;
   --font:'Inter Tight',helvetica,arial,sans-serif;
@@ -260,7 +262,7 @@ html,body{overflow-x:hidden}
 
 <header class="nav solid" id="nav">
   <div class="in">
-    <a class="logo" href="#top">tomas.</a>
+    <a class="logo" href="/">tomas.</a>
     <nav aria-label="Main"><ul>
       <li><a href="#work">Work</a></li>
       <li><a href="#clients">Clients</a></li>
@@ -278,7 +280,7 @@ html,body{overflow-x:hidden}
     <div class="capsule"><span>Helsinki</span><span>Remote worldwide</span><a href="mailto:tomas@tomaspentikainen.com">tomas@tomaspentikainen.com</a></div>
   </div>
   <div class="photo">
-    <img src="portfolio-tomas.jpg" width="544" height="820" alt="Portrait of Tomas Pentikäinen in front of green willow leaves">
+    <img src="portfolio-tomas.jpg" width="544" height="820" fetchpriority="high" decoding="async" alt="Portrait of Tomas Pentikäinen in front of green willow leaves">
   </div>
   <div class="worked" aria-label="Experience at">
     <div class="wrap">
@@ -305,32 +307,32 @@ html,body{overflow-x:hidden}
 
     <div class="grid">
       <a class="card rv" href="#case-coinmotion">
-        <div class="media"><div class="bg" style="background:linear-gradient(135deg,#0c4a6e 0%,#0284c7 55%,#7dd3fc 100%)"></div><img src="logo-coinmotion.png" alt="Coinmotion" width="535" height="68"></div>
+        <div class="media"><div class="bg" style="background:linear-gradient(135deg,#0c4a6e 0%,#0284c7 55%,#7dd3fc 100%)"></div><img loading="lazy" decoding="async" src="logo-coinmotion.png" alt="Coinmotion" width="535" height="68"></div>
         <h3>Coinmotion</h3><p>Content strategy and SEO for Finland's longest-running crypto broker</p>
         <ul class="tags"><li>SEO</li><li>Content strategy</li><li>Creators</li></ul>
       </a>
       <a class="card rv" href="#case-coinmotion">
-        <div class="media"><div class="bg" style="background:linear-gradient(135deg,#0c4a6e 0%,#0284c7 55%,#7dd3fc 100%)"></div><div class="stack"><img src="logo-coinmotion.png" alt="Coinmotion" width="535" height="68"><span class="sep" aria-hidden="true"></span><span class="bt w"><img src="logo-bittiraha.png" alt="" width="115" height="139">Bittiraha</span></div></div>
+        <div class="media"><div class="bg" style="background:linear-gradient(135deg,#0c4a6e 0%,#0284c7 55%,#7dd3fc 100%)"></div><div class="stack"><img loading="lazy" decoding="async" src="logo-coinmotion.png" alt="Coinmotion" width="535" height="68"><span class="sep" aria-hidden="true"></span><span class="bt w"><img loading="lazy" decoding="async" src="logo-bittiraha.png" alt="" width="115" height="139">Bittiraha</span></div></div>
         <h3>Coinmotion &amp; Bittiraha</h3><p>Search and AI visibility for two Finnish crypto brands</p>
         <ul class="tags"><li>GEO</li><li>AI search</li><li>Content</li></ul>
       </a>
       <a class="card rv" href="#case-restaurants">
-        <div class="media"><div class="bg" style="background:radial-gradient(120% 90% at 70% 10%,#3a3b39 0%,#202120 55%,#121312 100%)"></div><img src="logo-shelter.png" alt="Shelter" width="750" height="225"></div>
+        <div class="media"><div class="bg" style="background:radial-gradient(120% 90% at 70% 10%,#3a3b39 0%,#202120 55%,#121312 100%)"></div><img loading="lazy" decoding="async" src="logo-shelter.png" alt="Shelter" width="750" height="225"></div>
         <h3>Shelter</h3><p>MICHELIN Guide restaurant. Traffic, rankings and AI visibility up sharply, and more bookings to show for it</p>
         <ul class="tags"><li>Local SEO</li><li>Localisation</li><li>Reporting</li></ul>
       </a>
       <a class="card rv" href="#case-restaurants">
-        <div class="media"><div class="bg" style="background:radial-gradient(120% 90% at 70% 10%,#6a2a2c 0%,#461c1d 55%,#2c1112 100%)"></div><img src="logo-teller-yellow.svg" alt="Teller" width="350" height="167" style="max-height:40%"></div>
+        <div class="media"><div class="bg" style="background:radial-gradient(120% 90% at 70% 10%,#6a2a2c 0%,#461c1d 55%,#2c1112 100%)"></div><img loading="lazy" decoding="async" src="logo-teller-yellow.svg" alt="Teller" width="350" height="167" style="max-height:40%"></div>
         <h3>Teller</h3><p>No. 16 in Finland. Finnish-first SEO that lifted search traffic, rankings and table bookings</p>
         <ul class="tags"><li>Local SEO</li><li>Finnish meta</li><li>GA4 / GSC</li></ul>
       </a>
       <a class="card rv" href="#case-retail">
-        <div class="media"><div class="bg" style="background:linear-gradient(135deg,#c2410c 0%,#ff5000 55%,#ffb48a 100%)"></div><img class="wht" src="logo-size.png" alt="size?" width="640" height="234"></div>
+        <div class="media"><div class="bg" style="background:linear-gradient(135deg,#c2410c 0%,#ff5000 55%,#ffb48a 100%)"></div><img loading="lazy" decoding="async" class="wht" src="logo-size.png" alt="size?" width="640" height="234"></div>
         <h3>size?</h3><p>Led the Finnish launch as Digital Marketing Executive, the only Finn on the team</p>
         <ul class="tags"><li>Market entry</li><li>Digital marketing</li><li>E-commerce</li></ul>
       </a>
       <a class="card rv" href="#case-retail">
-        <div class="media"><div class="bg" style="background:linear-gradient(135deg,#0a0a0a 0%,#262626 55%,#525252 100%)"></div><img class="wht" src="logo-jd.svg" alt="JD Sports" width="316" height="316" style="max-height:44%"></div>
+        <div class="media"><div class="bg" style="background:linear-gradient(135deg,#0a0a0a 0%,#262626 55%,#525252 100%)"></div><img loading="lazy" decoding="async" class="wht" src="logo-jd.svg" alt="JD Sports" width="316" height="316" style="max-height:44%"></div>
         <h3>JD Sports</h3><p>Finnish team of five that grew the site to €20,000 a day in sales</p>
         <ul class="tags"><li>Copywriting</li><li>Localisation</li><li>E-commerce</li></ul>
       </a>
@@ -365,14 +367,14 @@ html,body{overflow-x:hidden}
   <div class="wrap">
     <div class="statement"><h2 id="clients-h" class="rv">Brands I've <strong>worked with</strong>.</h2></div>
     <div class="wall rv">
-      <div><img src="logo-netflix.svg" alt="Netflix" width="1024" height="277"></div>
-      <div><img src="logo-jd.svg" alt="JD Sports" width="316" height="316" style="max-height:40%"></div>
-      <div><img src="logo-size.png" alt="size?" width="640" height="234"></div>
-      <div><img src="logo-kantar.png" alt="Kantar" width="450" height="86"></div>
-      <div><img src="logo-coinmotion.svg" alt="Coinmotion" width="1000" height="250" style="max-width:60%;max-height:40%"></div>
-      <div><img class="shel" src="logo-shelter.png" alt="Shelter" width="750" height="225"></div>
-      <div><img src="logo-teller.svg" alt="Teller" width="350" height="167"></div>
-      <div><span class="bt big"><img src="logo-bittiraha.png" alt="" width="115" height="139">Bittiraha</span></div>
+      <div><img loading="lazy" decoding="async" src="logo-netflix.svg" alt="Netflix" width="1024" height="277"></div>
+      <div><img loading="lazy" decoding="async" src="logo-jd.svg" alt="JD Sports" width="316" height="316" style="max-height:40%"></div>
+      <div><img loading="lazy" decoding="async" src="logo-size.png" alt="size?" width="640" height="234"></div>
+      <div><img loading="lazy" decoding="async" src="logo-kantar.png" alt="Kantar" width="450" height="86"></div>
+      <div><img loading="lazy" decoding="async" src="logo-coinmotion.svg" alt="Coinmotion" width="1000" height="250" style="max-width:60%;max-height:40%"></div>
+      <div><img loading="lazy" decoding="async" class="shel" src="logo-shelter.png" alt="Shelter" width="750" height="225"></div>
+      <div><img loading="lazy" decoding="async" src="logo-teller.svg" alt="Teller" width="350" height="167"></div>
+      <div><span class="bt big"><img loading="lazy" decoding="async" src="logo-bittiraha.png" alt="" width="115" height="139">Bittiraha</span></div>
     </div>
   </div>
 </section>
@@ -380,7 +382,7 @@ html,body{overflow-x:hidden}
 <section aria-label="Case studies" style="padding-top:40px">
   <div class="wrap">
     <article class="panel rv" id="case-coinmotion">
-      <div class="visual" style="background:linear-gradient(135deg,#0c4a6e 0%,#0284c7 55%,#7dd3fc 100%)"><img src="logo-coinmotion.png" alt="" width="535" height="68"></div>
+      <div class="visual" style="background:linear-gradient(135deg,#0c4a6e 0%,#0284c7 55%,#7dd3fc 100%)"><img loading="lazy" decoding="async" src="logo-coinmotion.png" alt="" width="535" height="68"></div>
       <div>
         <blockquote>"Crypto is a hard sell in Finland. I focused on what Finns actually type when they're ready to act."</blockquote>
         <p class="by">Coinmotion · Content Strategist since 2022<br>Finland's longest-running crypto broker</p>
@@ -394,7 +396,7 @@ html,body{overflow-x:hidden}
     </article>
 
     <article class="panel rv" id="case-restaurants">
-      <div class="visual" style="background:linear-gradient(135deg,#202120 0%,#2c1a1a 55%,#461c1d 100%)"><div class="pair"><img src="logo-shelter.png" alt="Shelter" width="750" height="225"><span class="sep" aria-hidden="true"></span><img src="logo-teller-yellow.svg" alt="Teller" width="350" height="167"></div></div>
+      <div class="visual" style="background:linear-gradient(135deg,#202120 0%,#2c1a1a 55%,#461c1d 100%)"><div class="pair"><img loading="lazy" decoding="async" src="logo-shelter.png" alt="Shelter" width="750" height="225"><span class="sep" aria-hidden="true"></span><img loading="lazy" decoding="async" src="logo-teller-yellow.svg" alt="Teller" width="350" height="167"></div></div>
       <div>
         <blockquote>"Acclaimed kitchens, English-first websites, and guests searching in Finnish. Fixing that filled tables."</blockquote>
         <p class="by">Shelter (MICHELIN Guide) &amp; Teller (No. 16, Finland's 50 Best 2026)<br>Freelance through my own company</p>
@@ -408,7 +410,7 @@ html,body{overflow-x:hidden}
     </article>
 
     <article class="panel rv" id="case-retail">
-      <div class="visual" style="background:linear-gradient(135deg,#c2410c 0%,#ff5000 55%,#ffb48a 100%)"><img class="wht" src="logo-size.png" alt="" width="640" height="234"></div>
+      <div class="visual" style="background:linear-gradient(135deg,#c2410c 0%,#ff5000 55%,#ffb48a 100%)"><img loading="lazy" decoding="async" class="wht" src="logo-size.png" alt="" width="640" height="234"></div>
       <div>
         <blockquote>"From helping JD Sports Finland reach €20,000 a day to leading the size? launch in Finland."</blockquote>
         <p class="by">JD Sports (Copywriter) / size? (Digital Marketing Executive) · Amsterdam · 2018–2020</p>
@@ -451,15 +453,15 @@ html,body{overflow-x:hidden}
     <div class="rv">
       <p class="small-cap">Experience</p>
       <ul class="tl">
-        <li><span class="when">2022 – now</span><div><b>Content Strategist · Coinmotion</b><span>Content strategy, SEO, GEO, creator campaigns and native media across five markets, plus sister site Bittiraha</span></div><div class="lg"><img src="logo-coinmotion.svg" alt="Coinmotion" width="1000" height="250" style="height:30px;width:auto;max-width:none;max-height:none"></div></li>
-        <li><span class="when">2025 – 2026</span><div><b>Freelance SEO &amp; Content Lead</b><span>Shelter and Teller, through my own company</span></div><div class="lg"><img class="shel" src="logo-shelter.png" alt="Shelter" width="750" height="225" style="max-height:18px;max-width:52px"><img src="logo-teller.svg" alt="Teller" width="350" height="167" style="max-height:20px;max-width:42px"></div></li>
-        <li><span class="when">2021 – 2022</span><div><b>Content Specialist · Resulta</b><span>SEO-led content, WordPress, Semrush</span></div><div class="lg"><img src="logo-resulta.svg" alt="Resulta" width="200" height="200" style="max-height:30px;border-radius:3px"></div></li>
-        <li><span class="when">2020 – 2021</span><div><b>Freelance Writer · Kantar UK</b><span>Search-optimised articles, youth rebrand for Essity</span></div><div class="lg"><img src="logo-kantar.png" alt="Kantar" width="450" height="86" style="max-height:14px"></div></li>
-        <li><span class="when">2018 – 2020</span><div><b>Copywriter → Digital Marketing Executive · JD Sports / size?</b><span>Amsterdam · copywriter for JD Sports Finland, then Digital Marketing Executive leading the size? Finland launch</span></div><div class="lg"><img src="logo-jd.svg" alt="JD Sports" width="316" height="316" style="max-height:26px"><img src="logo-size.png" alt="size?" width="640" height="234" style="max-height:16px;max-width:48px"></div></li>
-        <li><span class="when">2017</span><div><b>Netflix</b><span>Amsterdam · global customer service, 97% satisfaction</span></div><div class="lg"><img src="logo-netflix.svg" alt="Netflix" width="1024" height="277" style="max-height:20px"></div></li>
-        <li><span class="when">2016</span><div><b>Content Producer · Wisby</b><span>Helsinki / London · content production and site maintenance for a London-based e-commerce company</span></div><div class="lg"><img src="logo-wisby.png" alt="Wisby" width="125" height="50" style="max-height:24px"></div></li>
-        <li><span class="when">2021</span><div><b>University of Vaasa</b><span>Bachelor of Economics, Industrial Management &amp; Marketing</span></div><div class="lg"><img src="logo-vaasa.png" alt="University of Vaasa" width="235" height="140" style="max-height:40px"></div></li>
-        <li><span class="when">2017</span><div><b>Universidad Carlos III de Madrid</b><span>Exchange studies, Madrid</span></div><div class="lg"><img src="logo-uc3m.svg" alt="Universidad Carlos III de Madrid" width="842" height="303" style="height:28px;width:auto;max-width:none;max-height:none"></div></li>
+        <li><span class="when">2022 – now</span><div><b>Content Strategist · Coinmotion</b><span>Content strategy, SEO, GEO, creator campaigns and native media across five markets, plus sister site Bittiraha</span></div><div class="lg"><img loading="lazy" decoding="async" src="logo-coinmotion.svg" alt="Coinmotion" width="1000" height="250" style="height:30px;width:auto;max-width:none;max-height:none"></div></li>
+        <li><span class="when">2025 – 2026</span><div><b>Freelance SEO &amp; Content Lead</b><span>Shelter and Teller, through my own company</span></div><div class="lg"><img loading="lazy" decoding="async" class="shel" src="logo-shelter.png" alt="Shelter" width="750" height="225" style="max-height:18px;max-width:52px"><img loading="lazy" decoding="async" src="logo-teller.svg" alt="Teller" width="350" height="167" style="max-height:20px;max-width:42px"></div></li>
+        <li><span class="when">2021 – 2022</span><div><b>Content Specialist · Resulta</b><span>SEO-led content, WordPress, Semrush</span></div><div class="lg"><img loading="lazy" decoding="async" src="logo-resulta.svg" alt="Resulta" width="200" height="200" style="max-height:30px;border-radius:3px"></div></li>
+        <li><span class="when">2020 – 2021</span><div><b>Freelance Writer · Kantar UK</b><span>Search-optimised articles, youth rebrand for Essity</span></div><div class="lg"><img loading="lazy" decoding="async" src="logo-kantar.png" alt="Kantar" width="450" height="86" style="max-height:14px"></div></li>
+        <li><span class="when">2018 – 2020</span><div><b>Copywriter → Digital Marketing Executive · JD Sports / size?</b><span>Amsterdam · copywriter for JD Sports Finland, then Digital Marketing Executive leading the size? Finland launch</span></div><div class="lg"><img loading="lazy" decoding="async" src="logo-jd.svg" alt="JD Sports" width="316" height="316" style="max-height:26px"><img loading="lazy" decoding="async" src="logo-size.png" alt="size?" width="640" height="234" style="max-height:16px;max-width:48px"></div></li>
+        <li><span class="when">2017</span><div><b>Netflix</b><span>Amsterdam · global customer service, 97% satisfaction</span></div><div class="lg"><img loading="lazy" decoding="async" src="logo-netflix.svg" alt="Netflix" width="1024" height="277" style="max-height:20px"></div></li>
+        <li><span class="when">2016</span><div><b>Content Producer · Wisby</b><span>Helsinki / London · content production and site maintenance for a London-based e-commerce company</span></div><div class="lg"><img loading="lazy" decoding="async" src="logo-wisby.png" alt="Wisby" width="125" height="50" style="max-height:24px"></div></li>
+        <li><span class="when">2021</span><div><b>University of Vaasa</b><span>Bachelor of Economics, Industrial Management &amp; Marketing</span></div><div class="lg"><img loading="lazy" decoding="async" src="logo-vaasa.png" alt="University of Vaasa" width="235" height="140" style="max-height:40px"></div></li>
+        <li><span class="when">2017</span><div><b>Universidad Carlos III de Madrid</b><span>Exchange studies, Madrid</span></div><div class="lg"><img loading="lazy" decoding="async" src="logo-uc3m.svg" alt="Universidad Carlos III de Madrid" width="842" height="303" style="height:28px;width:auto;max-width:none;max-height:none"></div></li>
       </ul>
     </div>
   </div>
@@ -523,6 +525,9 @@ html,body{overflow-x:hidden}
     var body=f.elements.message.value.trim()+'\n\n'+f.elements.name.value.trim()+'\n'+f.elements.email.value.trim();
   });
 })();
+</script>
+<script>
+document.querySelectorAll('a[href="#top"],a.logo').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();window.scrollTo({top:0,behavior:'smooth'});if(location.hash)history.replaceState(null,'',location.pathname+location.search);});});
 </script>
 </body>
 </html>
