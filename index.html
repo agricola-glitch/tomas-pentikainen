@@ -300,7 +300,7 @@ html,body{overflow-x:hidden}
 
 <section class="statement wash" id="work">
   <div class="wrap">
-    <h2 class="rv">I've built search visibility for a <strong>regulated crypto broker</strong>, a <strong>MICHELIN Guide restaurant</strong> and <strong>one of Finland's 16 best restaurants</strong>.</h2>
+    <h2 class="rv">I've built search visibility for a <strong>regulated crypto broker</strong> and a <strong>MICHELIN Guide restaurant</strong>, and led the <strong>size? launch in Finland</strong>.</h2>
     <a class="arrow rv" href="#about">About me <i aria-hidden="true">→</i></a>
 
     <div class="grid">
@@ -520,12 +520,7 @@ html,body{overflow-x:hidden}
     });
     if(!ok){msg.textContent='Please fill in your name, a valid email and a message.';return;}
     var sub='['+f.elements.topic.value+'] Enquiry from '+f.elements.name.value.trim();
-    var body=f.elements.message.value.trim()+'
-
-'+f.elements.name.value.trim()+'
-'+f.elements.email.value.trim();
-    location.href='mailto:tomas@tomaspentikainen.com?subject='+encodeURIComponent(sub)+'&body='+encodeURIComponent(body);
-    msg.textContent='Opening your email app. If nothing happens, email tomas@tomaspentikainen.com directly.';
+    var body=f.elements.message.value.trim()+'\n\n'+f.elements.name.value.trim()+'\n'+f.elements.email.value.trim();
   });
 })();
 </script>
