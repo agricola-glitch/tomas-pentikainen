@@ -118,12 +118,12 @@ section{padding:140px 0}
 
 /* LOGO WALL */
 .wall{display:grid;grid-template-columns:repeat(4,1fr);margin-top:72px}
-.wall div{aspect-ratio:16/10;display:grid;place-items:center;border-left:1px solid var(--line);border-top:1px solid var(--line)}
-.wall div:nth-child(4n+1){border-left:0}
-.wall div:nth-child(-n+4){border-top:0}
+.wall>*{aspect-ratio:16/10;display:grid;place-items:center;border-left:1px solid var(--line);border-top:1px solid var(--line)}
+.wall>*:nth-child(4n+1){border-left:0}
+.wall>*:nth-child(-n+4){border-top:0}
 .wall img{max-width:50%;max-height:32%;width:auto;height:auto;opacity:.9;transition:opacity .2s,transform .3s}
-.wall div:hover img{opacity:1;transform:scale(1.04)}
-@media (max-width:760px){.wall{grid-template-columns:repeat(2,1fr)}.wall div{border-left:1px solid var(--line)!important;border-top:1px solid var(--line)!important}.wall div:nth-child(2n+1){border-left:0!important}.wall div:nth-child(-n+2){border-top:0!important}}
+.wall>*:hover img{opacity:1;transform:scale(1.04)}
+@media (max-width:760px){.wall{grid-template-columns:repeat(2,1fr)}.wall>*{border-left:1px solid var(--line)!important;border-top:1px solid var(--line)!important}.wall>*:nth-child(2n+1){border-left:0!important}.wall>*:nth-child(-n+2){border-top:0!important}}
 
 /* CASE PANELS */
 .panel{background:var(--light);border-radius:8px;display:grid;grid-template-columns:1fr 1fr;gap:72px;padding:56px;align-items:center;margin-top:24px}
@@ -209,7 +209,7 @@ html,body{overflow-x:hidden}
   .nav .in{grid-template-columns:1fr auto;padding:0 14px 0 18px;height:54px}
   .nav{top:10px;left:10px;right:10px}
   .grid{margin-top:56px}
-  .wall div{aspect-ratio:3/2}
+  .wall>*{aspect-ratio:3/2}
   .numbers div{padding:32px 12px}
   .panel blockquote{font-size:24px}
   .contact h2{font-size:48px}
@@ -251,6 +251,9 @@ html,body{overflow-x:hidden}
 .cform .fmsg{margin:12px 0 0;font-size:14px;color:var(--sky-ink);min-height:1em}
 .cform .bad{border-color:#dc2626!important;background:#fff}
 @media (max-width:560px){.cform{padding:20px}.cform .row2{grid-template-columns:1fr;gap:0}}
+.wall>a{transition:background .2s}
+.wall>a:hover{background:rgba(255,255,255,.6)}
+.wall>a:focus-visible{outline-offset:-4px}
 /* reveal */
 .rv{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
 .rv.in{opacity:1;transform:none}
@@ -367,14 +370,14 @@ html,body{overflow-x:hidden}
   <div class="wrap">
     <div class="statement"><h2 id="clients-h" class="rv">Brands I've <strong>worked with</strong>.</h2></div>
     <div class="wall rv">
-      <div><img loading="lazy" decoding="async" src="logo-netflix.svg" alt="Netflix" width="1024" height="277"></div>
-      <div><img loading="lazy" decoding="async" src="logo-jd.svg" alt="JD Sports" width="316" height="316" style="max-height:40%"></div>
-      <div><img loading="lazy" decoding="async" src="logo-size.png" alt="size?" width="640" height="234"></div>
-      <div><img loading="lazy" decoding="async" src="logo-kantar.png" alt="Kantar" width="450" height="86"></div>
-      <div><img loading="lazy" decoding="async" src="logo-coinmotion.svg" alt="Coinmotion" width="1000" height="250" style="max-width:60%;max-height:40%"></div>
-      <div><img loading="lazy" decoding="async" class="shel" src="logo-shelter.png" alt="Shelter" width="750" height="225"></div>
-      <div><img loading="lazy" decoding="async" src="logo-teller.svg" alt="Teller" width="350" height="167"></div>
-      <div><span class="bt big"><img loading="lazy" decoding="async" src="logo-bittiraha.png" alt="" width="115" height="139">Bittiraha</span></div>
+      <a href="https://www.netflix.com" target="_blank" rel="noopener" aria-label="Netflix (opens in a new tab)"><img loading="lazy" decoding="async" src="logo-netflix.svg" alt="Netflix" width="1024" height="277"></a>
+      <a href="https://www.jdsports.fi" target="_blank" rel="noopener" aria-label="JD Sports (opens in a new tab)"><img loading="lazy" decoding="async" src="logo-jd.svg" alt="JD Sports" width="316" height="316" style="max-height:40%"></a>
+      <a href="https://www.size.co.uk" target="_blank" rel="noopener" aria-label="size? (opens in a new tab)"><img loading="lazy" decoding="async" src="logo-size.png" alt="size?" width="640" height="234"></a>
+      <a href="https://www.kantar.com" target="_blank" rel="noopener" aria-label="Kantar (opens in a new tab)"><img loading="lazy" decoding="async" src="logo-kantar.png" alt="Kantar" width="450" height="86"></a>
+      <a href="https://coinmotion.com" target="_blank" rel="noopener" aria-label="Coinmotion (opens in a new tab)"><img loading="lazy" decoding="async" src="logo-coinmotion.svg" alt="Coinmotion" width="1000" height="250" style="max-width:60%;max-height:40%"></a>
+      <a href="https://www.shelter.fi" target="_blank" rel="noopener" aria-label="Shelter (opens in a new tab)"><img loading="lazy" decoding="async" class="shel" src="logo-shelter.png" alt="Shelter" width="750" height="225"></a>
+      <a href="https://www.ravintolateller.fi" target="_blank" rel="noopener" aria-label="Teller (opens in a new tab)"><img loading="lazy" decoding="async" src="logo-teller.svg" alt="Teller" width="350" height="167"></a>
+      <a href="https://bittiraha.fi" target="_blank" rel="noopener" aria-label="Bittiraha (opens in a new tab)"><span class="bt big"><img loading="lazy" decoding="async" src="logo-bittiraha.png" alt="" width="115" height="139">Bittiraha</span></a>
     </div>
   </div>
 </section>
