@@ -235,6 +235,20 @@ html,body{overflow-x:hidden}
 .card .media .stack .sep{width:40px;height:1px;background:rgba(255,255,255,.45)}
 .card .media .stack .bt.w{color:#fff;font-size:clamp(17px,1.6vw,22px)}
 .card .media .stack .bt.w img{height:clamp(26px,2.3vw,34px);width:auto;max-width:none;max-height:none}
+.cform{max-width:680px;margin:8px auto 0;text-align:left;background:#fff;border:1px solid var(--line);border-radius:18px;padding:28px;box-shadow:0 20px 50px rgba(10,10,10,.06)}
+.cform label{display:block;font-size:14px;font-weight:500;margin:0 0 16px;color:var(--ink)}
+.cform input,.cform select,.cform textarea{display:block;width:100%;margin-top:6px;font:400 16px/1.4 var(--font);color:var(--ink);background:#f5f5f7;border:1px solid transparent;border-radius:10px;padding:12px 14px;transition:border-color .15s,background .15s}
+.cform textarea{resize:vertical;min-height:120px}
+.cform input:focus,.cform select:focus,.cform textarea:focus{outline:none;background:#fff;border-color:var(--sky)}
+.cform .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.cform .actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px;margin-top:4px}
+.cform button.pill{border:0;cursor:pointer;font:400 16px var(--font);gap:10px}
+.cform button.pill i{font-style:normal}
+.cform .alt{font-size:14px;color:var(--ink-50)}
+.cform .alt a{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+.cform .fmsg{margin:12px 0 0;font-size:14px;color:var(--sky-ink);min-height:1em}
+.cform .bad{border-color:#dc2626!important;background:#fff}
+@media (max-width:560px){.cform{padding:20px}.cform .row2{grid-template-columns:1fr;gap:0}}
 /* reveal */
 .rv{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
 .rv.in{opacity:1;transform:none}
@@ -455,7 +469,27 @@ html,body{overflow-x:hidden}
   <div class="wrap rv">
     <h2 id="contact-h">Let's work <strong>together</strong>.</h2>
     <p>SEO, AI search visibility and content for the Finnish market. Freelance projects, invoiced through my own Finnish company.</p>
-    <a class="pill" href="mailto:tomas@tomaspentikainen.com">tomas@tomaspentikainen.com</a>
+    <form class="cform" id="cform" novalidate>
+      <div class="row2">
+        <label>Name<input name="name" type="text" autocomplete="name" required></label>
+        <label>Email<input name="email" type="email" autocomplete="email" required></label>
+      </div>
+      <label>What do you need?
+        <select name="topic">
+          <option>Finnish SEO</option>
+          <option>AI search visibility</option>
+          <option>Content strategy</option>
+          <option>Creators &amp; media</option>
+          <option>Something else</option>
+        </select>
+      </label>
+      <label>Message<textarea name="message" rows="5" required placeholder="A few lines about your brand and goals"></textarea></label>
+      <div class="actions">
+        <button type="submit" class="pill">Send message <i aria-hidden="true">→</i></button>
+        <span class="alt">or email <a href="mailto:tomas@tomaspentikainen.com">tomas@tomaspentikainen.com</a></span>
+      </div>
+      <p class="fmsg" id="fmsg" role="status" aria-live="polite"></p>
+    </form>
   </div>
 </section>
 </main>
@@ -470,6 +504,29 @@ html,body{overflow-x:hidden}
   if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -6% 0px'});
   els.forEach(function(e){io.observe(e)});
+})();
+</script>
+<script>
+(function(){
+  var f=document.getElementById('cform'); if(!f) return;
+  var msg=document.getElementById('fmsg');
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var ok=true;
+    ['name','email','message'].forEach(function(n){
+      var el=f.elements[n], v=el.value.trim();
+      var bad=!v||(n==='email'&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v));
+      el.classList.toggle('bad',bad); if(bad) ok=false;
+    });
+    if(!ok){msg.textContent='Please fill in your name, a valid email and a message.';return;}
+    var sub='['+f.elements.topic.value+'] Enquiry from '+f.elements.name.value.trim();
+    var body=f.elements.message.value.trim()+'
+
+'+f.elements.name.value.trim()+'
+'+f.elements.email.value.trim();
+    location.href='mailto:tomas@tomaspentikainen.com?subject='+encodeURIComponent(sub)+'&body='+encodeURIComponent(body);
+    msg.textContent='Opening your email app. If nothing happens, email tomas@tomaspentikainen.com directly.';
+  });
 })();
 </script>
 </body>
