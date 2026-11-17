@@ -1,1 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="16" fill="#009de0"/><text x="32" y="38" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="17" letter-spacing="-0.6" fill="#0a0a0a">tomas.</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#009de0"/><path fill="#0a0a0a" d="M9 10h31v8.5H29.5V54h-10V18.5H9z"/><circle cx="47.5" cy="49" r="5.5" fill="#0a0a0a"/></svg>
