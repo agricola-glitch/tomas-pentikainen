@@ -278,6 +278,40 @@ html,body{overflow-x:hidden}
 .offer .small-cap{margin-bottom:14px;color:var(--sky-ink)}
 .offer .pill{gap:10px}.offer .pill i{font-style:normal}
 @media (max-width:640px){.offer{padding:40px 22px}}
+.lp-grid{display:grid;grid-template-columns:1fr minmax(260px,400px);gap:56px;align-items:center}
+.lp-photo{margin:0;border-radius:22px;overflow:hidden;aspect-ratio:4/5;background:#e9e9ec}
+.lp-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 22%;display:block}
+@media (max-width:900px){.lp-grid{grid-template-columns:1fr;gap:36px}.lp-photo{max-width:340px;aspect-ratio:1/1}}
+.forms{margin:56px auto 8px;text-align:center}
+.forms-en{font-size:15px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-50);margin:0 0 14px}
+.forms-row{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 26px;margin:0;font-weight:300;font-size:clamp(30px,4.4vw,64px);letter-spacing:-.03em;line-height:1.15}
+.forms-row span:nth-child(1){color:var(--ink)}
+.forms-row span:nth-child(2){color:var(--sky-ink);font-weight:600}
+.forms-row span:nth-child(3){color:rgba(10,10,10,.55)}
+.forms-row span:nth-child(4){color:rgba(10,10,10,.4)}
+.forms-row span:nth-child(5){color:rgba(10,10,10,.28)}
+.forms-row span:nth-child(6){color:var(--sky);font-weight:600}
+.forms-cap{color:var(--ink-50);margin:16px 0 0}
+#direct{padding-top:0}
+.offer{max-width:1100px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;text-align:left}
+.offer p{margin-left:0}
+.report{background:#fff;border-radius:14px;box-shadow:0 30px 60px rgba(10,10,10,.12),0 0 0 1px var(--line);padding:24px 24px 20px;transform:rotate(1.5deg)}
+.rp-top{display:flex;justify-content:space-between;font-size:12px;color:var(--ink-50);border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:16px}
+.rp-top b{color:var(--ink);font-weight:600}
+.rp-h{font-weight:300;font-size:22px;line-height:1.2;letter-spacing:-.01em;margin:0 0 16px!important;color:var(--ink)!important}
+.rp-h strong{color:var(--sky-ink);font-weight:600}
+.rp-row{display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--line);padding:11px 0}
+.rp-row span{font-size:12px;font-weight:600;width:14px;color:var(--ink-50)}
+.rp-row i{display:block;height:9px;border-radius:9px;background:rgba(10,10,10,.14)}
+.rp-row em{display:block;height:9px;border-radius:9px;background:var(--sky);margin-left:auto}
+.rp-next{font-size:13px;color:var(--sky-ink)!important;margin:14px 0 0!important;font-weight:500}
+@media (max-width:900px){.offer{grid-template-columns:1fr;gap:36px}.report{transform:none}}
+.guide{padding:0!important;overflow:hidden}
+.guide .cover{display:flex;align-items:flex-end;aspect-ratio:16/9;padding:20px 22px;color:#fff;text-decoration:none}
+.guide .cover span{font-weight:300;font-size:clamp(26px,2.6vw,36px);letter-spacing:-.02em;line-height:1}
+.guide h3,.guide p{padding:0 26px}
+.guide h3{margin-top:22px!important}
+.guide p{padding-bottom:26px}
 .lp-hero .ctas{display:flex;flex-wrap:wrap;gap:12px 22px;align-items:center}
 .lp-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:56px;text-align:left}
 .lp-cards article{background:var(--light);border-radius:8px;padding:30px}
@@ -320,11 +354,14 @@ html,body{overflow-x:hidden}
 </header>
 
 <div class="lp-hero" id="top">
-  <div class="wrap">
+  <div class="wrap lp-grid">
+   <div>
     <p class="who">Tomas Pentikäinen · Finnish SEO strategist in Helsinki</p>
     <h1>SEO in <strong class="sky">Finland</strong> for <strong class="sky">international brands</strong>.</h1>
     <p class="lead">To rank in Finland, you need pages built on what Finns actually type into Google, in Finnish, not translated English keywords. I'm a native Finnish SEO strategist who helps international brands get found on Google.fi and in AI answers from ChatGPT, Claude, Perplexity and Google.</p>
     <div class="ctas"><a class="pill" href="#check">Get a free Finnish search check <i aria-hidden="true">→</i></a><a class="arrow" href="/">See my work <i aria-hidden="true">→</i></a></div>
+   </div>
+   <figure class="lp-photo"><img src="/portfolio-tomas.jpg" width="544" height="820" fetchpriority="high" decoding="async" alt="Tomas Pentikäinen, native Finnish SEO strategist in Helsinki"></figure>
   </div>
 </div>
 
@@ -333,6 +370,11 @@ html,body{overflow-x:hidden}
 <section id="why" class="statement">
   <div class="wrap">
     <h2 class="rv"><strong class="sky">Finnish search</strong> is its own market.</h2>
+    <div class="forms rv" aria-label="Finnish forms of the word shoe">
+      <p class="forms-en">"shoe"</p>
+      <p class="forms-row"><span>kenkä</span><span>kengät</span><span>kenkiä</span><span>kengän</span><span>kengille</span><span>kenkäkauppa</span></p>
+      <p class="forms-cap">One English word. Six ways Finns search for it.</p>
+    </div>
     <div class="lp-cards rv">
       <article><h3>Translation misses the search</h3><p>Finnish has 15 grammatical cases and long compound words. One English keyword turns into many Finnish forms, and the one people type is rarely the dictionary translation.</p></article>
       <article><h3>English-only sites lose</h3><p>Finland is bilingual, but most people search in Finnish. Brands that launch in English rank for their own name and little else.</p></article>
@@ -355,14 +397,19 @@ html,body{overflow-x:hidden}
   </div>
 </section>
 
-<section id="direct" class="statement">
+<section id="direct">
   <div class="wrap">
-    <h2 class="rv">Senior work, <strong class="sky">without the agency overhead</strong>.</h2>
-    <div class="lp-cards rv">
+   <div class="blackblock rv">
+    <div class="head">
+      <p class="small-cap" style="color:#7dd3fc">Why work direct</p>
+      <h2>Senior work, <strong>without the agency overhead</strong>.</h2>
+    </div>
+    <div class="cards3">
       <article><h3>Lower cost</h3><p>No account managers, sales team or office overhead built into the price. Your budget goes into the work itself, at a fraction of a typical agency retainer.</p></article>
       <article><h3>Direct line</h3><p>You talk to the person who does the research, writes the Finnish and reads the data. Nothing gets lost between a strategist and a junior.</p></article>
       <article><h3>Faster results</h3><p>Decisions happen in a message, not in a chain of meetings, so fixes and new pages go live sooner.</p></article>
     </div>
+   </div>
   </div>
 </section>
 
@@ -384,10 +431,22 @@ html,body{overflow-x:hidden}
 <section id="check" class="statement">
   <div class="wrap">
     <div class="offer rv">
+     <div class="offer-copy">
       <p class="small-cap sky">Free, no obligation</p>
       <h2>Free <strong class="sky">Finnish</strong> search check.</h2>
       <p>Send me your site. Within a week you get the five Finnish searches your site misses, roughly how often people make them, and which page would win each one. No call needed.</p>
       <a class="pill" href="#contact">Request your check <i aria-hidden="true">→</i></a>
+     </div>
+     <div class="report" aria-hidden="true">
+      <div class="rp-top"><b>tomas.</b><span>Finnish search check</span></div>
+      <p class="rp-h">Five <strong>Finnish</strong> searches your site is missing</p>
+      <div class="rp-row"><span>1</span><i style="width:62%"></i><em style="width:28%"></em></div>
+      <div class="rp-row"><span>2</span><i style="width:48%"></i><em style="width:22%"></em></div>
+      <div class="rp-row"><span>3</span><i style="width:55%"></i><em style="width:18%"></em></div>
+      <div class="rp-row"><span>4</span><i style="width:40%"></i><em style="width:14%"></em></div>
+      <div class="rp-row"><span>5</span><i style="width:51%"></i><em style="width:11%"></em></div>
+      <p class="rp-next">Which page would win each one →</p>
+     </div>
     </div>
   </div>
 </section>
@@ -396,9 +455,9 @@ html,body{overflow-x:hidden}
   <div class="wrap">
     <h2 class="rv">Guides to <strong class="sky">SEO in Finland</strong>.</h2>
     <div class="lp-cards rv">
-      <article><h3><a href="/finnish-seo/finnish-website-localization/">How to localize a website for Finland</a></h3><p>Keywords, tone, prices, payments, Swedish and hreflang: what translation leaves out.</p></article>
-      <article><h3><a href="/finnish-seo/finnish-keyword-research/">Why translated keywords fail</a></h3><p>Cases, compound words and everyday vocabulary, with real Finnish examples.</p></article>
-      <article><h3><a href="/finnish-seo/do-you-need-a-finnish-website/">Do you need a Finnish website?</a></h3><p>When English is enough in Finland, and which pages to localize first.</p></article>
+      <article class="guide"><a class="cover" href="/finnish-seo/finnish-website-localization/" tabindex="-1" aria-hidden="true" style="background:linear-gradient(135deg,#0c4a6e 0%,#0284c7 60%,#7dd3fc 100%)"><span lang="fi">lokalisointi</span></a><h3><a href="/finnish-seo/finnish-website-localization/">How to localize a website for Finland</a></h3><p>Keywords, tone, prices, payments, Swedish and hreflang: what translation leaves out.</p></article>
+      <article class="guide"><a class="cover" href="/finnish-seo/finnish-keyword-research/" tabindex="-1" aria-hidden="true" style="background:linear-gradient(135deg,#0a0a0a 0%,#1f2937 60%,#0369a1 100%)"><span lang="fi">kengät, kenkiä</span></a><h3><a href="/finnish-seo/finnish-keyword-research/">Why translated keywords fail</a></h3><p>Cases, compound words and everyday vocabulary, with real Finnish examples.</p></article>
+      <article class="guide"><a class="cover" href="/finnish-seo/do-you-need-a-finnish-website/" tabindex="-1" aria-hidden="true" style="background:linear-gradient(135deg,#075985 0%,#0ea5e9 55%,#bbf7d0 100%)"><span lang="fi">suomeksi?</span></a><h3><a href="/finnish-seo/do-you-need-a-finnish-website/">Do you need a Finnish website?</a></h3><p>When English is enough in Finland, and which pages to localize first.</p></article>
     </div>
   </div>
 </section>
