@@ -258,6 +258,14 @@ html,body{overflow-x:hidden}
 .rv{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
 .rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.card .media .bg{transition:none}}
+.hub{position:relative;margin-top:12px;display:grid;grid-template-columns:1fr 1.25fr;gap:40px;align-items:center;border:1px solid rgba(125,211,252,.35);background:linear-gradient(135deg,rgba(125,211,252,.12),rgba(255,255,255,.03));border-radius:8px;padding:36px}
+.hub h3{font-weight:500;font-size:clamp(24px,2.4vw,32px);letter-spacing:-.02em;line-height:1.15;margin:0 0 12px}
+.hub p{margin:0;color:rgba(255,255,255,.62);font-size:16.5px}
+.hub ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:20px 28px}
+.hub li b{display:block;font-weight:500;margin-bottom:4px}
+.hub li span{color:rgba(255,255,255,.62);font-size:15.5px}
+@media (max-width:900px){.hub{grid-template-columns:1fr;gap:28px;padding:24px}}
+@media (max-width:560px){.hub ul{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -441,6 +449,15 @@ html,body{overflow-x:hidden}
         <article><h3>Data first</h3><p>GA4, Search Console and Semrush, which I've used for years, feed straight into my workflow, so every brief starts from real searches and clicks.</p></article>
         <article><h3>Verified, not plausible</h3><p>AI tools are fast and sometimes confidently wrong. Every number and claim gets checked at the source.</p></article>
       </div>
+      <div class="hub">
+        <div><p class="small-cap" style="color:#7dd3fc;margin-bottom:12px">Own tool</p><h3>I built my own SEO workstation.</h3><p>A desktop app I wrote that pulls Search Console, GA4 and Semrush into one place, so audits, plans and reports all start from the same numbers.</p></div>
+        <ul>
+          <li><b>Site audit</b><span>Technical checks, including whether AI crawlers can read the site</span></li>
+          <li><b>AI traffic</b><span>Visits from ChatGPT, Perplexity and other assistants, tracked in GA4</span></li>
+          <li><b>Opportunities</b><span>Next steps ranked by real impressions and search volume</span></li>
+          <li><b>Reports &amp; drafts</b><span>Client reports and content drafts with every source checked</span></li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
@@ -461,7 +478,7 @@ html,body{overflow-x:hidden}
         <li><span class="when">2021 – 2022</span><div><b>Content Specialist · Resulta</b><span>SEO-led content, WordPress, Semrush</span></div><div class="lg"><img loading="lazy" decoding="async" src="logo-resulta.svg" alt="Resulta" width="200" height="200" style="max-height:30px;border-radius:3px"></div></li>
         <li><span class="when">2020 – 2021</span><div><b>Freelance Writer · Kantar UK</b><span>Search-optimised articles, youth rebrand for Essity</span></div><div class="lg"><img loading="lazy" decoding="async" src="logo-kantar.png" alt="Kantar" width="450" height="86" style="max-height:14px"></div></li>
         <li><span class="when">2018 – 2020</span><div><b>Copywriter → Digital Marketing Executive · JD Sports / size?</b><span>Amsterdam · copywriter for JD Sports Finland, then Digital Marketing Executive for size? (FTSE 100 group)</span></div><div class="lg"><img loading="lazy" decoding="async" src="logo-jd.svg" alt="JD Sports" width="316" height="316" style="max-height:26px"><img loading="lazy" decoding="async" src="logo-size.png" alt="size?" width="640" height="234" style="max-height:16px;max-width:48px"></div></li>
-        <li><span class="when">2017</span><div><b>Netflix</b><span>Amsterdam · global customer service, 97% satisfaction</span></div><div class="lg"><img loading="lazy" decoding="async" src="logo-netflix.svg" alt="Netflix" width="1024" height="277" style="max-height:20px"></div></li>
+        <li><span class="when">2017</span><div><b>CSR · Netflix</b><span>Amsterdam · global customer service, 97% satisfaction</span></div><div class="lg"><img loading="lazy" decoding="async" src="logo-netflix.svg" alt="Netflix" width="1024" height="277" style="max-height:20px"></div></li>
         <li><span class="when">2016</span><div><b>Content Producer · Wisby</b><span>Helsinki / London · content production and site maintenance for a London-based e-commerce company</span></div><div class="lg"><img loading="lazy" decoding="async" src="logo-wisby.png" alt="Wisby" width="125" height="50" style="max-height:24px"></div></li>
         <li><span class="when">2021</span><div><b>University of Vaasa</b><span>Bachelor of Economics, Industrial Management &amp; Marketing</span></div><div class="lg"><img loading="lazy" decoding="async" src="logo-vaasa.png" alt="University of Vaasa" width="235" height="140" style="max-height:40px"></div></li>
         <li><span class="when">2017</span><div><b>Universidad Carlos III de Madrid</b><span>Exchange studies, Madrid</span></div><div class="lg"><img loading="lazy" decoding="async" src="logo-uc3m.svg" alt="Universidad Carlos III de Madrid" width="842" height="303" style="height:28px;width:auto;max-width:none;max-height:none"></div></li>
@@ -526,6 +543,8 @@ html,body{overflow-x:hidden}
     if(!ok){msg.textContent='Please fill in your name, a valid email and a message.';return;}
     var sub='['+f.elements.topic.value+'] Enquiry from '+f.elements.name.value.trim();
     var body=f.elements.message.value.trim()+'\n\n'+f.elements.name.value.trim()+'\n'+f.elements.email.value.trim();
+    window.location.href='mailto:tomas@tomaspentikainen.com?subject='+encodeURIComponent(sub)+'&body='+encodeURIComponent(body);
+    msg.textContent='Opening your email app. If nothing opens, email tomas@tomaspentikainen.com directly.';
   });
 })();
 </script>
