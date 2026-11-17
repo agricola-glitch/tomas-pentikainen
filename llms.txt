@@ -1,0 +1,20 @@
+# Tomas Pentikäinen
+
+> Finnish SEO strategist and content writer in Helsinki. Helps international brands get found in Finnish Google search and in AI answers (ChatGPT, Claude, Perplexity, Google AI Overviews). Native Finnish, works in English, remote worldwide. Clients work directly with him, with no agency layer.
+
+Services: Finnish keyword research, website localization for Finland, technical SEO foundations (Search Console, GA4, hreflang), native Finnish content, AI search visibility (GEO), reporting in English.
+
+Background: content strategist for a Finnish regulated crypto broker since 2022; SEO and content for two Helsinki restaurants (MICHELIN Guide; Finland's 50 Best); earlier JD Sports and size? (Amsterdam), Kantar, Netflix.
+
+Contact: tomas@tomaspentikainen.com
+
+## Pages
+
+- [Portfolio](https://tomaspentikainen.com/): work, case studies, how he works, experience
+- [SEO in Finland for international brands](https://tomaspentikainen.com/finnish-seo/): services, FAQ and contact for brands entering Finland
+
+## Guides
+
+- [How to localize a website for Finland](https://tomaspentikainen.com/finnish-seo/finnish-website-localization/): keywords, tone (sinä/te), prices with VAT, payments, Swedish, hreflang
+- [Finnish keyword research: why translated keywords fail](https://tomaspentikainen.com/finnish-seo/finnish-keyword-research/): cases, compound words, everyday vocabulary, reading small search volumes
+- [Do you need a Finnish-language website to sell in Finland?](https://tomaspentikainen.com/finnish-seo/do-you-need-a-finnish-website/): when English is enough and which pages to localize first
