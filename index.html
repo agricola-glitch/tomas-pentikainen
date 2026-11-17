@@ -74,6 +74,8 @@ strong{font-weight:600}
 .hero .worked .wrap{display:flex;align-items:center;flex-wrap:wrap;gap:14px 44px;padding-top:20px;padding-bottom:20px}
 .lbl{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-50);font-weight:500}
 .hero .worked ul{display:flex;flex-wrap:wrap;align-items:center;gap:16px 44px;list-style:none;margin:0;padding:0}
+.hero .worked li{display:flex;align-items:center;justify-content:center}
+.hero .worked img{height:var(--h);width:auto;max-width:100%}
 .blk{filter:brightness(0)}
 .wht{filter:brightness(0) invert(1)}
 @media (max-width:900px){
@@ -201,6 +203,12 @@ html,body{overflow-x:hidden}
   .hero .worked{position:static;background:#fff}
   .hero .worked .wrap{gap:12px 26px;padding-top:18px;padding-bottom:18px}
   .hero .worked ul{gap:14px 26px}
+}
+@media (max-width:640px){
+  .hero .worked .wrap{display:block;padding-top:20px;padding-bottom:22px}
+  .hero .worked .lbl{display:block;text-align:center;margin-bottom:16px}
+  .hero .worked ul{justify-content:center;gap:18px 24px}
+  .hero .worked img{height:calc(var(--h) * .8)}
   .capsule{width:auto;border-radius:18px}
   .capsule a{word-break:break-all}
 }
@@ -289,13 +297,13 @@ html,body{overflow-x:hidden}
     <div class="wrap">
       <span class="lbl">Experience at</span>
       <ul>
-        <li><img src="logo-netflix.svg" alt="Netflix" width="1024" height="277" style="height:26px;width:auto"></li>
-        <li><img src="logo-jd.svg" alt="JD Sports" width="316" height="316" style="height:30px;width:auto"></li>
-        <li><img src="logo-size.png" alt="size?" width="640" height="234" style="height:24px;width:auto"></li>
-        <li><img src="logo-kantar.png" alt="Kantar" width="450" height="86" style="height:17px;width:auto"></li>
-        <li><img src="logo-coinmotion.svg" alt="Coinmotion" width="1000" height="250" style="height:30px;width:auto"></li>
-        <li><img class="shel" src="logo-shelter.png" alt="Shelter" width="750" height="225" style="height:24px;width:auto"></li>
-        <li><img src="logo-teller.svg" alt="Teller" width="350" height="167" style="height:28px;width:auto"></li>
+        <li><img src="logo-netflix.svg" alt="Netflix" width="1024" height="277" style="--h:24px"></li>
+        <li><img src="logo-jd.svg" alt="JD Sports" width="316" height="316" style="--h:32px"></li>
+        <li><img src="logo-size.png" alt="size?" width="640" height="234" style="--h:26px"></li>
+        <li><img src="logo-kantar.png" alt="Kantar" width="450" height="86" style="--h:17px"></li>
+        <li><img src="logo-coinmotion-blue.png" alt="Coinmotion" width="535" height="68" style="--h:16px"></li>
+        <li><img class="shel" src="logo-shelter.png" alt="Shelter" width="750" height="225" style="--h:25px"></li>
+        <li><img src="logo-teller.svg" alt="Teller" width="350" height="167" style="--h:29px"></li>
       </ul>
     </div>
   </div>
@@ -440,7 +448,7 @@ html,body{overflow-x:hidden}
     <div class="rv">
       <p class="small-cap">Experience</p>
       <ul class="tl">
-        <li><span class="when">2022 – now</span><div><b>Content Strategist · Coinmotion</b><span>Content strategy, SEO, GEO, creator campaigns and native media across five markets, plus sister site Bittiraha</span></div><div class="lg"><img loading="lazy" decoding="async" src="logo-coinmotion.svg" alt="Coinmotion" width="1000" height="250" style="height:30px;width:auto;max-width:none;max-height:none"></div></li>
+        <li><span class="when">2022 – now</span><div><b>Content Strategist · Coinmotion</b><span>Content strategy, SEO, GEO, creator campaigns and native media across five markets, plus sister site Bittiraha</span></div><div class="lg"><img loading="lazy" decoding="async" src="logo-coinmotion-blue.png" alt="Coinmotion" width="535" height="68" style="height:15px;width:auto;max-width:none;max-height:none"></div></li>
         <li><span class="when">2025 – 2026</span><div><b>SEO &amp; Content Strategist</b><span>Shelter and Teller, through my own company</span></div><div class="lg"><img loading="lazy" decoding="async" class="shel" src="logo-shelter.png" alt="Shelter" width="750" height="225" style="max-height:18px;max-width:52px"><img loading="lazy" decoding="async" src="logo-teller.svg" alt="Teller" width="350" height="167" style="max-height:20px;max-width:42px"></div></li>
         <li><span class="when">2021 – 2022</span><div><b>Content Specialist · Resulta</b><span>SEO-led content, WordPress, Semrush</span></div><div class="lg"><img loading="lazy" decoding="async" src="logo-resulta.svg" alt="Resulta" width="200" height="200" style="max-height:30px;border-radius:3px"></div></li>
         <li><span class="when">2020 – 2021</span><div><b>Freelance Writer · Kantar UK</b><span>Search-optimised articles, youth rebrand for Essity</span></div><div class="lg"><img loading="lazy" decoding="async" src="logo-kantar.png" alt="Kantar" width="450" height="86" style="max-height:14px"></div></li>
@@ -462,7 +470,7 @@ html,body{overflow-x:hidden}
       <a href="https://www.jdsports.fi" target="_blank" rel="noopener" aria-label="JD Sports (opens in a new tab)"><img loading="lazy" decoding="async" src="logo-jd.svg" alt="JD Sports" width="316" height="316" style="max-height:40%"></a>
       <a href="https://www.size.co.uk" target="_blank" rel="noopener" aria-label="size? (opens in a new tab)"><img loading="lazy" decoding="async" src="logo-size.png" alt="size?" width="640" height="234"></a>
       <a href="https://www.kantar.com" target="_blank" rel="noopener" aria-label="Kantar (opens in a new tab)"><img loading="lazy" decoding="async" src="logo-kantar.png" alt="Kantar" width="450" height="86"></a>
-      <a href="https://coinmotion.com" target="_blank" rel="noopener" aria-label="Coinmotion (opens in a new tab)"><img loading="lazy" decoding="async" src="logo-coinmotion.svg" alt="Coinmotion" width="1000" height="250" style="max-width:60%;max-height:40%"></a>
+      <a href="https://coinmotion.com" target="_blank" rel="noopener" aria-label="Coinmotion (opens in a new tab)"><img loading="lazy" decoding="async" src="logo-coinmotion-blue.png" alt="Coinmotion" width="535" height="68" style="max-width:62%;max-height:20%"></a>
       <a href="https://www.shelter.fi" target="_blank" rel="noopener" aria-label="Shelter (opens in a new tab)"><img loading="lazy" decoding="async" class="shel" src="logo-shelter.png" alt="Shelter" width="750" height="225"></a>
       <a href="https://www.ravintolateller.fi" target="_blank" rel="noopener" aria-label="Teller (opens in a new tab)"><img loading="lazy" decoding="async" src="logo-teller.svg" alt="Teller" width="350" height="167"></a>
       <a href="https://bittiraha.fi" target="_blank" rel="noopener" aria-label="Bittiraha (opens in a new tab)"><span class="bt big"><img loading="lazy" decoding="async" src="logo-bittiraha.png" alt="" width="115" height="139">Bittiraha</span></a>
