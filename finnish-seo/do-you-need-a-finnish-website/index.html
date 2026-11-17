@@ -273,6 +273,12 @@ html,body{overflow-x:hidden}
 .lp-hero h1{font-weight:300;font-size:clamp(40px,5.4vw,76px);line-height:1.05;letter-spacing:-.035em;margin:0 0 30px;max-width:980px}
 .lp-hero .lead{font-size:clamp(19px,1.6vw,22px);line-height:1.5;max-width:760px;margin:0 0 36px;color:var(--ink)}
 .lp-hero .pill{gap:10px}.lp-hero .pill i{font-style:normal}
+.offer{max-width:760px;margin:0 auto;background:var(--light);border-radius:18px;padding:56px 40px}
+.offer h2{font-weight:300;font-size:clamp(32px,3.6vw,50px);letter-spacing:-.025em;line-height:1.1;margin:0 0 18px}
+.offer p{color:var(--ink-50);max-width:580px;margin:0 auto 28px}
+.offer .small-cap{margin-bottom:14px}
+.offer .pill{gap:10px}.offer .pill i{font-style:normal}
+@media (max-width:640px){.offer{padding:40px 22px}}
 .lp-hero .ctas{display:flex;flex-wrap:wrap;gap:12px 22px;align-items:center}
 .lp-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:56px;text-align:left}
 .lp-cards article{background:var(--light);border-radius:8px;padding:30px}
@@ -360,7 +366,7 @@ html,body{overflow-x:hidden}
 <p>Blog posts and secondary pages can follow once you see what Finnish visitors look for. The order should come from <a href="/finnish-seo/finnish-keyword-research/">Finnish keyword research</a>, not from your English sitemap.</p>
 <h2>What a partial Finnish site needs</h2>
 <p>A partial Finnish site works if it is technically clean. Each Finnish page needs its own URL, hreflang tags linking it to the English version, and a Finnish meta title and description. Navigation should not drop Finnish visitors onto English pages without warning. The <a href="/finnish-seo/finnish-website-localization/">localization checklist</a> covers the details.</p>
-<p>Not sure whether your category needs Finnish pages? Searches in your category answer that quickly. <a href="/finnish-seo/#contact">Send me your site and market</a>, and I will tell you which pages are worth localizing first.</p>
+<p>Not sure whether your category needs Finnish pages? Searches in your category answer that quickly. <a href="/finnish-seo/#check">Get a free Finnish search check</a>, and within a week I will show you the five Finnish searches your site misses.</p>
   </article>
   <aside class="more" aria-label="More guides">
     <h2>More guides on SEO in Finland</h2>
@@ -382,8 +388,19 @@ html,body{overflow-x:hidden}
         <label>Name<input name="name" type="text" autocomplete="name" required></label>
         <label>Email<input name="email" type="email" autocomplete="email" required></label>
       </div>
+      <div class="row2">
+        <label>Website<input name="website" type="url" inputmode="url" placeholder="https://" autocomplete="url"></label>
+        <label>Selling in Finland yet?
+          <select name="stage">
+            <option>Already selling in Finland</option>
+            <option>Launching within 6 months</option>
+            <option>Just exploring</option>
+          </select>
+        </label>
+      </div>
       <label>What do you need?
         <select name="topic">
+          <option>Free Finnish search check</option>
           <option>SEO in Finland</option>
           <option>AI search visibility</option>
           <option>Content strategy</option>
@@ -391,7 +408,7 @@ html,body{overflow-x:hidden}
           <option>Something else</option>
         </select>
       </label>
-      <label>Message<textarea name="message" rows="5" required placeholder="A few lines about your brand and goals"></textarea></label>
+      <label>Message<textarea name="message" rows="5" required placeholder="Your brand, products and goals in Finland"></textarea></label>
       <div class="actions">
         <button type="submit" class="pill">Send message <i aria-hidden="true">→</i></button>
         <span class="alt">or email <a href="mailto:tomas@tomaspentikainen.com">tomas@tomaspentikainen.com</a></span>

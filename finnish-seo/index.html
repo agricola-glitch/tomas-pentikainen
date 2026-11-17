@@ -272,6 +272,12 @@ html,body{overflow-x:hidden}
 .lp-hero h1{font-weight:300;font-size:clamp(40px,5.4vw,76px);line-height:1.05;letter-spacing:-.035em;margin:0 0 30px;max-width:980px}
 .lp-hero .lead{font-size:clamp(19px,1.6vw,22px);line-height:1.5;max-width:760px;margin:0 0 36px;color:var(--ink)}
 .lp-hero .pill{gap:10px}.lp-hero .pill i{font-style:normal}
+.offer{max-width:760px;margin:0 auto;background:var(--light);border-radius:18px;padding:56px 40px}
+.offer h2{font-weight:300;font-size:clamp(32px,3.6vw,50px);letter-spacing:-.025em;line-height:1.1;margin:0 0 18px}
+.offer p{color:var(--ink-50);max-width:580px;margin:0 auto 28px}
+.offer .small-cap{margin-bottom:14px}
+.offer .pill{gap:10px}.offer .pill i{font-style:normal}
+@media (max-width:640px){.offer{padding:40px 22px}}
 .lp-hero .ctas{display:flex;flex-wrap:wrap;gap:12px 22px;align-items:center}
 .lp-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:56px;text-align:left}
 .lp-cards article{background:var(--light);border-radius:8px;padding:30px}
@@ -318,7 +324,7 @@ html,body{overflow-x:hidden}
     <p class="who">Tomas Pentikäinen · Finnish SEO strategist in Helsinki</p>
     <h1>SEO in <strong class="sky">Finland</strong> for <strong class="sky">international brands</strong>.</h1>
     <p class="lead">To rank in Finland, you need pages built on what Finns actually type into Google, in Finnish, not translated English keywords. I'm a native Finnish SEO strategist who helps international brands get found on Google.fi and in AI answers from ChatGPT, Claude, Perplexity and Google.</p>
-    <div class="ctas"><a class="pill" href="#contact">Talk about your launch <i aria-hidden="true">→</i></a><a class="arrow" href="/">See my work <i aria-hidden="true">→</i></a></div>
+    <div class="ctas"><a class="pill" href="#check">Get a free Finnish search check <i aria-hidden="true">→</i></a><a class="arrow" href="/">See my work <i aria-hidden="true">→</i></a></div>
   </div>
 </div>
 
@@ -375,6 +381,17 @@ html,body{overflow-x:hidden}
   </div>
 </section>
 
+<section id="check" class="statement">
+  <div class="wrap">
+    <div class="offer rv">
+      <p class="small-cap sky">Free, no obligation</p>
+      <h2>Free <strong class="sky">Finnish</strong> search check.</h2>
+      <p>Send me your site. Within a week you get the five Finnish searches your site misses, roughly how often people make them, and which page would win each one. No call needed.</p>
+      <a class="pill" href="#contact">Request your check <i aria-hidden="true">→</i></a>
+    </div>
+  </div>
+</section>
+
 <section id="guides" class="statement wash">
   <div class="wrap">
     <h2 class="rv">Guides to <strong class="sky">SEO in Finland</strong>.</h2>
@@ -402,15 +419,26 @@ html,body{overflow-x:hidden}
 <section id="contact" class="contact wash" aria-labelledby="contact-h">
   <div class="wrap rv">
     <h2 id="contact-h">Launching in <strong class="sky">Finland</strong>?</h2>
-    <p>Tell me about your brand and your market. Happy to talk in English.</p>
+    <p>Ask for a free Finnish search check, or tell me about your brand and your market. Happy to talk in English.</p>
     <form class="cform" id="cform" novalidate>
       <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
       <div class="row2">
         <label>Name<input name="name" type="text" autocomplete="name" required></label>
         <label>Email<input name="email" type="email" autocomplete="email" required></label>
       </div>
+      <div class="row2">
+        <label>Website<input name="website" type="url" inputmode="url" placeholder="https://" autocomplete="url"></label>
+        <label>Selling in Finland yet?
+          <select name="stage">
+            <option>Already selling in Finland</option>
+            <option>Launching within 6 months</option>
+            <option>Just exploring</option>
+          </select>
+        </label>
+      </div>
       <label>What do you need?
         <select name="topic">
+          <option>Free Finnish search check</option>
           <option>SEO in Finland</option>
           <option>AI search visibility</option>
           <option>Content strategy</option>
@@ -418,7 +446,7 @@ html,body{overflow-x:hidden}
           <option>Something else</option>
         </select>
       </label>
-      <label>Message<textarea name="message" rows="5" required placeholder="A few lines about your brand and goals"></textarea></label>
+      <label>Message<textarea name="message" rows="5" required placeholder="Your brand, products and goals in Finland"></textarea></label>
       <div class="actions">
         <button type="submit" class="pill">Send message <i aria-hidden="true">→</i></button>
         <span class="alt">or email <a href="mailto:tomas@tomaspentikainen.com">tomas@tomaspentikainen.com</a></span>
