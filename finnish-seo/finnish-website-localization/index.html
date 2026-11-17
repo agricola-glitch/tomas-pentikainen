@@ -6,9 +6,9 @@
 <title>Finnish Website Localization: What Translation Misses</title>
 <meta name="description" content="Localizing a website for Finland takes Finnish keywords, local prices, the right tone and clean hreflang. A native Finnish SEO strategist&#x27;s checklist.">
 <link rel="canonical" href="https://tomaspentikainen.com/finnish-seo/finnish-website-localization/">
-<link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml">
-<link rel="icon" href="/favicon-32.png?v=2" sizes="32x32" type="image/png">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2">
+<link rel="icon" href="/favicon.svg?v=3" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png?v=3" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=3">
 <meta name="theme-color" content="#f5f5f7">
 <meta name="author" content="Tomas Pentikäinen">
 <meta property="og:type" content="article">
@@ -276,9 +276,43 @@ html,body{overflow-x:hidden}
 .offer{max-width:760px;margin:0 auto;background:var(--light);border-radius:18px;padding:56px 40px}
 .offer h2{font-weight:300;font-size:clamp(32px,3.6vw,50px);letter-spacing:-.025em;line-height:1.1;margin:0 0 18px}
 .offer p{color:var(--ink-50);max-width:580px;margin:0 auto 28px}
-.offer .small-cap{margin-bottom:14px}
+.offer .small-cap{margin-bottom:14px;color:var(--sky-ink)}
 .offer .pill{gap:10px}.offer .pill i{font-style:normal}
 @media (max-width:640px){.offer{padding:40px 22px}}
+.lp-grid{display:grid;grid-template-columns:1fr minmax(260px,400px);gap:56px;align-items:center}
+.lp-photo{margin:0;border-radius:22px;overflow:hidden;aspect-ratio:4/5;background:#e9e9ec}
+.lp-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 22%;display:block}
+@media (max-width:900px){.lp-grid{grid-template-columns:1fr;gap:36px}.lp-photo{max-width:340px;aspect-ratio:1/1}}
+.forms{margin:56px auto 8px;text-align:center}
+.forms-en{font-size:15px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-50);margin:0 0 14px}
+.forms-row{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 26px;margin:0;font-weight:300;font-size:clamp(30px,4.4vw,64px);letter-spacing:-.03em;line-height:1.15}
+.forms-row span:nth-child(1){color:var(--ink)}
+.forms-row span:nth-child(2){color:var(--sky-ink);font-weight:600}
+.forms-row span:nth-child(3){color:rgba(10,10,10,.55)}
+.forms-row span:nth-child(4){color:rgba(10,10,10,.4)}
+.forms-row span:nth-child(5){color:rgba(10,10,10,.28)}
+.forms-row span:nth-child(6){color:var(--sky);font-weight:600}
+.forms-cap{color:var(--ink-50);margin:16px 0 0}
+#direct{padding-top:0}
+.offer{max-width:1100px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;text-align:left}
+.offer p{margin-left:0}
+.report{background:#fff;border-radius:14px;box-shadow:0 30px 60px rgba(10,10,10,.12),0 0 0 1px var(--line);padding:24px 24px 20px;transform:rotate(1.5deg)}
+.rp-top{display:flex;justify-content:space-between;font-size:12px;color:var(--ink-50);border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:16px}
+.rp-top b{color:var(--ink);font-weight:600}
+.rp-h{font-weight:300;font-size:22px;line-height:1.2;letter-spacing:-.01em;margin:0 0 16px!important;color:var(--ink)!important}
+.rp-h strong{color:var(--sky-ink);font-weight:600}
+.rp-row{display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--line);padding:11px 0}
+.rp-row span{font-size:12px;font-weight:600;width:14px;color:var(--ink-50)}
+.rp-row i{display:block;height:9px;border-radius:9px;background:rgba(10,10,10,.14)}
+.rp-row em{display:block;height:9px;border-radius:9px;background:var(--sky);margin-left:auto}
+.rp-next{font-size:13px;color:var(--sky-ink)!important;margin:14px 0 0!important;font-weight:500}
+@media (max-width:900px){.offer{grid-template-columns:1fr;gap:36px}.report{transform:none}}
+.guide{padding:0!important;overflow:hidden}
+.guide .cover{display:flex;align-items:flex-end;aspect-ratio:16/9;padding:20px 22px;color:#fff;text-decoration:none}
+.guide .cover span{font-weight:300;font-size:clamp(26px,2.6vw,36px);letter-spacing:-.02em;line-height:1}
+.guide h3,.guide p{padding:0 26px}
+.guide h3{margin-top:22px!important}
+.guide p{padding-bottom:26px}
 .lp-hero .ctas{display:flex;flex-wrap:wrap;gap:12px 22px;align-items:center}
 .lp-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:56px;text-align:left}
 .lp-cards article{background:var(--light);border-radius:8px;padding:30px}
@@ -319,6 +353,36 @@ html,body{overflow-x:hidden}
 .more ul{list-style:none;margin:0;padding:0}
 .more li{margin:0 0 10px}
 .more a{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+.fig{margin:44px -40px 48px;}
+.fig figcaption{font-size:14px;color:var(--ink-50);margin:14px 40px 0;font-style:italic}
+.cmp,.dec{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.cmp-col,.dec-col{border-radius:18px;padding:26px 26px 18px}
+.cmp-h{font-size:12px!important;letter-spacing:.12em;text-transform:uppercase;font-weight:600;margin:0 0 16px!important}
+.cmp-col p:not(.cmp-h){margin:0 0 14px;border-top:1px solid var(--line);padding-top:12px;line-height:1.35}
+.cmp-col b{display:block;font-weight:500;font-size:17px}
+.cmp-col span{display:block;font-size:13px;color:var(--ink-50);margin-top:3px}
+.cmp-col.muted{background:var(--light)}
+.cmp-col.muted b{color:rgba(10,10,10,.45);text-decoration:line-through;text-decoration-color:rgba(10,10,10,.25)}
+.cmp-col.muted .cmp-h{color:var(--ink-50)}
+.cmp-col.good{background:#0a0a0a;color:#fff}
+.cmp-col.good .cmp-h{color:#7dd3fc}
+.cmp-col.good p:not(.cmp-h){border-top-color:rgba(255,255,255,.14)}
+.cmp-col.good span{color:rgba(255,255,255,.6)}
+.tree{background:var(--light);border-radius:18px;padding:34px 30px;text-align:center}
+.tree-root{font-weight:300;font-size:clamp(34px,4vw,48px);letter-spacing:-.03em;margin:0 0 22px!important}
+.tree-label{font-size:12px!important;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-50);margin:18px 0 10px!important}
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:0!important}
+.chips span{background:#fff;border-radius:999px;padding:7px 15px;font-size:17px;box-shadow:0 0 0 1px var(--line)}
+.chips span.on{background:var(--sky-ink);color:#fff;box-shadow:none;font-weight:500}
+.dec-col ul{list-style:none;margin:0;padding:0}
+.dec-col li{border-top:1px solid var(--line);padding:11px 0;font-size:17px;line-height:1.35;margin:0}
+.dec-col.light{background:var(--light)}
+.dec-col.light .cmp-h{color:var(--ink-50)}
+.dec-col.dark{background:linear-gradient(135deg,#0c4a6e 0%,#0369a1 60%,#0ea5e9 100%);color:#fff}
+.dec-col.dark .cmp-h{color:#e0f2fe}
+.dec-col.dark li{border-top-color:rgba(255,255,255,.22)}
+@media (max-width:900px){.fig{margin:36px 0 40px}.fig figcaption{margin:12px 0 0}}
+@media (max-width:640px){.cmp,.dec{grid-template-columns:1fr}}
 @media (max-width:640px){.art-hero{padding:120px 0 44px}.article{font-size:18px;padding-top:44px}}
 </style>
 </head>
@@ -363,6 +427,23 @@ html,body{overflow-x:hidden}
 <p>Consumer prices in Finland are shown with VAT included. The standard VAT rate has been <a href="https://www.vero.fi/en/businesses-and-corporations/taxes-and-charges/vat/rates-of-vat/" target="_blank" rel="noopener">25.5% since 1 September 2024</a>, so a price imported from a non-EU store without tax will look wrong at checkout.</p>
 <p>Format matters as well. Finns write <em lang="fi">29,90 €</em>, with a decimal comma and the euro sign after the number. Dates go day first (<em lang="fi">17.11.2026</em>), and times use a 24-hour clock with a dot (<em lang="fi">klo 18.30</em>).</p>
 <p>At checkout, offer the methods Finns already use. Online bank payments and MobilePay are everyday options next to cards, and many shoppers expect a choice of parcel lockers for delivery. A checkout that only accepts cards and home delivery loses buyers at the last step.</p>
+<figure class="fig">
+  <div class="cmp">
+    <div class="cmp-col muted"><p class="cmp-h">Translated</p>
+      <p><b>€29.90 + VAT</b><span>Price</span></p>
+      <p><b>Credit card only</b><span>Payment</span></p>
+      <p><b>Home delivery</b><span>Delivery</span></p>
+      <p><b lang="fi">Olkaa hyvä ja syöttäkää sähköpostiosoitteenne</b><span>Form label, formal "te"</span></p>
+    </div>
+    <div class="cmp-col good"><p class="cmp-h">Localized</p>
+      <p><b lang="fi">29,90 € (sis. alv 25,5 %)</b><span>Price with VAT included</span></p>
+      <p><b lang="fi">Verkkopankki, MobilePay tai kortti</b><span>Bank payment, MobilePay or card</span></p>
+      <p><b lang="fi">Toimitus pakettiautomaattiin</b><span>Delivery to a parcel locker</span></p>
+      <p><b lang="fi">Anna sähköpostiosoitteesi</b><span>Form label, informal "sinä"</span></p>
+    </div>
+  </div>
+  <figcaption>Figure 1. The same checkout, translated and localized for Finland.</figcaption>
+</figure>
 <h2>Decide early whether you need Swedish</h2>
 <p>Finland has two official languages, Finnish and Swedish. Swedish speakers are a small minority, concentrated on the west and south coasts and in Åland, so most brands should start with Finnish only.</p>
 <p>A Swedish version makes sense when you target those regions or a bilingual audience. Write it for Finland: Finland Swedish uses some words that differ from Sweden's Swedish, and prices, delivery and service details must still be Finnish. Mark each version with its own hreflang code, <em lang="fi">fi-FI</em> and <em lang="fi">sv-FI</em>.</p>

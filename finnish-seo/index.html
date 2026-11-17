@@ -6,9 +6,9 @@
 <title>SEO in Finland for International Brands | Tomas Pentikäinen</title>
 <meta name="description" content="Looking for an SEO agency in Finland? Work directly with a native Finnish SEO strategist: Finnish keyword research, localisation and AI search visibility.">
 <link rel="canonical" href="https://tomaspentikainen.com/finnish-seo/">
-<link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml">
-<link rel="icon" href="/favicon-32.png?v=2" sizes="32x32" type="image/png">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2">
+<link rel="icon" href="/favicon.svg?v=3" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png?v=3" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=3">
 <meta name="theme-color" content="#f5f5f7">
 <meta property="og:type" content="website">
 <meta property="og:title" content="SEO in Finland for International Brands">
@@ -312,6 +312,16 @@ html,body{overflow-x:hidden}
 .guide h3,.guide p{padding:0 26px}
 .guide h3{margin-top:22px!important}
 .guide p{padding-bottom:26px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.startcheck{display:flex;align-items:center;gap:6px;background:#fff;border-radius:999px;padding:6px 6px 6px 22px;max-width:560px;box-shadow:0 12px 30px rgba(10,10,10,.08),0 0 0 1px var(--line)}
+.startcheck input{flex:1;min-width:0;border:0;outline:0;background:transparent;font:400 17px var(--font);color:var(--ink);padding:10px 0}
+.startcheck .pill{border:0;cursor:pointer;font:400 16px var(--font);gap:10px;white-space:nowrap}
+.startcheck .pill i{font-style:normal}
+.startcheck:focus-within{box-shadow:0 12px 30px rgba(10,10,10,.08),0 0 0 2px var(--sky)}
+.sc-note{font-size:14px;color:var(--ink-50);margin:14px 0 0;max-width:560px}
+.sc-note a{color:var(--ink);text-decoration:underline;text-underline-offset:3px;margin-left:6px}
+.lp-grid>div{min-width:0}
+@media (max-width:480px){.startcheck{flex-wrap:wrap;border-radius:22px;padding:8px}.startcheck input{flex:1 1 100%;padding:10px 12px}.startcheck .pill{flex:1 1 100%;justify-content:center}}
 .lp-hero .ctas{display:flex;flex-wrap:wrap;gap:12px 22px;align-items:center}
 .lp-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:56px;text-align:left}
 .lp-cards article{background:var(--light);border-radius:8px;padding:30px}
@@ -359,7 +369,12 @@ html,body{overflow-x:hidden}
     <p class="who">Tomas Pentikäinen · Finnish SEO strategist in Helsinki</p>
     <h1>SEO in <strong class="sky">Finland</strong> for <strong class="sky">international brands</strong>.</h1>
     <p class="lead">To rank in Finland, you need pages built on what Finns actually type into Google, in Finnish, not translated English keywords. I'm a native Finnish SEO strategist who helps international brands get found on Google.fi and in AI answers from ChatGPT, Claude, Perplexity and Google.</p>
-    <div class="ctas"><a class="pill" href="#check">Get a free Finnish search check <i aria-hidden="true">→</i></a><a class="arrow" href="/">See my work <i aria-hidden="true">→</i></a></div>
+    <form class="startcheck" id="startcheck" action="#contact" novalidate>
+      <label class="sr" for="sc-url">Your website</label>
+      <input id="sc-url" type="text" inputmode="url" autocomplete="url" placeholder="yourbrand.com">
+      <button type="submit" class="pill">Get my free check <i aria-hidden="true">→</i></button>
+    </form>
+    <p class="sc-note">Free Finnish search check: the five Finnish searches your site misses, within a week. <a href="/">See my work</a></p>
    </div>
    <figure class="lp-photo"><img src="/portfolio-tomas.jpg" width="544" height="820" fetchpriority="high" decoding="async" alt="Tomas Pentikäinen, native Finnish SEO strategist in Helsinki"></figure>
   </div>
@@ -558,6 +573,20 @@ html,body{overflow-x:hidden}
 </script>
 <script>
 document.querySelectorAll('a[href="#top"],a.logo').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();window.scrollTo({top:0,behavior:'smooth'});if(location.hash)history.replaceState(null,'',location.pathname+location.search);});});
+</script>
+<script>
+(function(){
+  var sc=document.getElementById('startcheck'), f=document.getElementById('cform'); if(!sc||!f) return;
+  sc.addEventListener('submit',function(e){
+    e.preventDefault();
+    var v=document.getElementById('sc-url').value.trim();
+    if(v&&!/^https?:\/\//i.test(v)) v='https://'+v;
+    if(v) f.elements.website.value=v;
+    f.elements.topic.value='Free Finnish search check';
+    document.getElementById('contact').scrollIntoView({behavior:'smooth'});
+    setTimeout(function(){f.elements.name.focus({preventScroll:true});},600);
+  });
+})();
 </script>
 </body>
 </html>
