@@ -290,7 +290,7 @@ html,body{overflow-x:hidden}
 .forms-row span:nth-child(3){color:rgba(10,10,10,.55)}
 .forms-row span:nth-child(4){color:rgba(10,10,10,.4)}
 .forms-row span:nth-child(5){color:rgba(10,10,10,.28)}
-.forms-row span:nth-child(6){color:var(--sky);font-weight:600}
+.forms-row span:nth-child(6){color:rgba(10,10,10,.2)}
 .forms-cap{color:var(--ink-50);margin:16px 0 0}
 #direct{padding-top:0}
 .offer{max-width:1100px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;text-align:left}
@@ -344,6 +344,7 @@ html,body{overflow-x:hidden}
 .faq details[open] summary::after{content:"\2212"}
 .faq p{margin:14px 0 0;color:var(--ink-50);max-width:760px}
 @media (max-width:900px){.lp-cards{grid-template-columns:1fr}.lp-list{grid-template-columns:1fr}.lp-hero{padding:130px 0 80px}}
+.lglink{display:inline-flex;align-items:center;justify-content:center;color:inherit;transition:opacity .2s}.lglink:hover{opacity:.7}
 </style>
 <script src="/consent.js" defer></script>
 </head>
@@ -388,8 +389,8 @@ html,body{overflow-x:hidden}
     <h2 class="rv"><strong class="sky">Finnish search</strong> is its own market.</h2>
     <div class="forms rv" aria-label="Finnish forms of the word shoe">
       <p class="forms-en">"shoe"</p>
-      <p class="forms-row"><span>kenkä</span><span>kengät</span><span>kenkiä</span><span>kengän</span><span>kengille</span><span>kenkäkauppa</span></p>
-      <p class="forms-cap">One English word. Six ways Finns search for it.</p>
+      <p class="forms-row"><span>kenkä</span><span>kengät</span><span>kenkiä</span><span>kengän</span><span>kengissä</span><span>kengille</span></p>
+      <p class="forms-cap">One English word. Six of its many Finnish forms.</p>
     </div>
     <div class="lp-cards rv">
       <article><h3>Translation misses the search</h3><p>Finnish has 15 grammatical cases and long compound words. One English keyword turns into many Finnish forms, and the one people type is rarely the dictionary translation.</p></article>
@@ -433,13 +434,13 @@ html,body{overflow-x:hidden}
   <div class="wrap">
     <h2 class="rv">Experience with <strong class="sky">global and Finnish brands</strong>.</h2>
     <div class="lp-logos rv">
-      <img loading="lazy" src="/logo-netflix.svg" alt="Netflix" width="1024" height="277" style="height:24px">
-      <img loading="lazy" src="/logo-jd.svg" alt="JD Sports" width="316" height="316" style="height:32px">
-      <img loading="lazy" src="/logo-size.png" alt="size?" width="640" height="234" style="height:26px">
-      <img loading="lazy" src="/logo-kantar.png" alt="Kantar" width="450" height="86" style="height:17px">
-      <img loading="lazy" src="/logo-coinmotion-blue.png" alt="Coinmotion" width="535" height="68" style="height:18px">
-      <img loading="lazy" class="shel" src="/logo-shelter.png" alt="Shelter" width="750" height="225" style="height:25px">
-      <img loading="lazy" src="/logo-teller.svg" alt="Teller" width="350" height="167" style="height:29px">
+      <a class="lglink" href="https://www.netflix.com" target="_blank" rel="noopener" aria-label="Netflix (opens in a new tab)"><img loading="lazy" src="/logo-netflix.svg" alt="Netflix" width="1024" height="277" style="height:24px"></a>
+      <a class="lglink" href="https://www.jdsports.fi" target="_blank" rel="noopener" aria-label="JD Sports (opens in a new tab)"><img loading="lazy" src="/logo-jd.svg" alt="JD Sports" width="316" height="316" style="height:32px"></a>
+      <a class="lglink" href="https://www.size.co.uk" target="_blank" rel="noopener" aria-label="size? (opens in a new tab)"><img loading="lazy" src="/logo-size.png" alt="size?" width="640" height="234" style="height:26px"></a>
+      <a class="lglink" href="https://www.kantar.com" target="_blank" rel="noopener" aria-label="Kantar (opens in a new tab)"><img loading="lazy" src="/logo-kantar.png" alt="Kantar" width="450" height="86" style="height:17px"></a>
+      <a class="lglink" href="https://coinmotion.com" target="_blank" rel="noopener" aria-label="Coinmotion (opens in a new tab)"><img loading="lazy" src="/logo-coinmotion-blue.png" alt="Coinmotion" width="535" height="68" style="height:18px"></a>
+      <a class="lglink" href="https://www.shelter.fi" target="_blank" rel="noopener" aria-label="Shelter (opens in a new tab)"><img loading="lazy" class="shel" src="/logo-shelter.png" alt="Shelter" width="750" height="225" style="height:25px"></a>
+      <a class="lglink" href="https://www.ravintolateller.fi" target="_blank" rel="noopener" aria-label="Teller (opens in a new tab)"><img loading="lazy" src="/logo-teller.svg" alt="Teller" width="350" height="167" style="height:29px"></a>
     </div>
   </div>
 </section>

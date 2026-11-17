@@ -268,6 +268,7 @@ html,body{overflow-x:hidden}
 .rv{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
 .rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.card .media .bg{transition:none}}
+.lglink{display:inline-flex;align-items:center;justify-content:center;color:inherit;transition:opacity .2s}.lglink:hover{opacity:.7}
 </style>
 <script src="/consent.js" defer></script>
 </head>
@@ -300,13 +301,13 @@ html,body{overflow-x:hidden}
     <div class="wrap">
       <span class="lbl">Experience at</span>
       <ul>
-        <li><img src="logo-netflix.svg" alt="Netflix" width="1024" height="277" style="--h:24px"></li>
-        <li><img src="logo-jd.svg" alt="JD Sports" width="316" height="316" style="--h:32px"></li>
-        <li><img src="logo-size.png" alt="size?" width="640" height="234" style="--h:26px"></li>
-        <li><img src="logo-kantar.png" alt="Kantar" width="450" height="86" style="--h:17px"></li>
-        <li><img src="logo-coinmotion-blue.png" alt="Coinmotion" width="535" height="68" style="--h:16px"></li>
-        <li><img class="shel" src="logo-shelter.png" alt="Shelter" width="750" height="225" style="--h:25px"></li>
-        <li><img src="logo-teller.svg" alt="Teller" width="350" height="167" style="--h:29px"></li>
+        <li><a class="lglink" href="https://www.netflix.com" target="_blank" rel="noopener" aria-label="Netflix (opens in a new tab)"><img src="logo-netflix.svg" alt="Netflix" width="1024" height="277" style="--h:24px"></a></li>
+        <li><a class="lglink" href="https://www.jdsports.fi" target="_blank" rel="noopener" aria-label="JD Sports (opens in a new tab)"><img src="logo-jd.svg" alt="JD Sports" width="316" height="316" style="--h:32px"></a></li>
+        <li><a class="lglink" href="https://www.size.co.uk" target="_blank" rel="noopener" aria-label="size? (opens in a new tab)"><img src="logo-size.png" alt="size?" width="640" height="234" style="--h:26px"></a></li>
+        <li><a class="lglink" href="https://www.kantar.com" target="_blank" rel="noopener" aria-label="Kantar (opens in a new tab)"><img src="logo-kantar.png" alt="Kantar" width="450" height="86" style="--h:17px"></a></li>
+        <li><a class="lglink" href="https://coinmotion.com" target="_blank" rel="noopener" aria-label="Coinmotion (opens in a new tab)"><img src="logo-coinmotion-blue.png" alt="Coinmotion" width="535" height="68" style="--h:16px"></a></li>
+        <li><a class="lglink" href="https://www.shelter.fi" target="_blank" rel="noopener" aria-label="Shelter (opens in a new tab)"><img class="shel" src="logo-shelter.png" alt="Shelter" width="750" height="225" style="--h:25px"></a></li>
+        <li><a class="lglink" href="https://www.ravintolateller.fi" target="_blank" rel="noopener" aria-label="Teller (opens in a new tab)"><img src="logo-teller.svg" alt="Teller" width="350" height="167" style="--h:29px"></a></li>
       </ul>
     </div>
   </div>
@@ -397,7 +398,7 @@ html,body{overflow-x:hidden}
 <section aria-label="Case studies" style="padding-top:40px">
   <div class="wrap">
     <article class="panel rv" id="case-coinmotion">
-      <div class="visual" style="background:linear-gradient(135deg,#0c4a6e 0%,#0284c7 55%,#7dd3fc 100%)"><img loading="lazy" decoding="async" src="logo-coinmotion.png" alt="" width="535" height="68"></div>
+      <div class="visual" style="background:linear-gradient(135deg,#0c4a6e 0%,#0284c7 55%,#7dd3fc 100%)"><a class="lglink" href="https://coinmotion.com" target="_blank" rel="noopener" aria-label="Coinmotion (opens in a new tab)"><img loading="lazy" decoding="async" src="logo-coinmotion.png" alt="" width="535" height="68"></a></div>
       <div>
         <blockquote>"Crypto is a hard sell in Finland. I focused on what Finns actually type when they're ready to act."</blockquote>
         <p class="by">Coinmotion · Content Strategist since 2022<br>Finland's longest-running crypto broker</p>
@@ -411,7 +412,7 @@ html,body{overflow-x:hidden}
     </article>
 
     <article class="panel rv" id="case-restaurants">
-      <div class="visual" style="background:linear-gradient(135deg,#202120 0%,#2c1a1a 55%,#461c1d 100%)"><div class="pair"><img loading="lazy" decoding="async" src="logo-shelter.png" alt="Shelter" width="750" height="225"><span class="sep" aria-hidden="true"></span><img loading="lazy" decoding="async" src="logo-teller-yellow.svg" alt="Teller" width="350" height="167"></div></div>
+      <div class="visual" style="background:linear-gradient(135deg,#202120 0%,#2c1a1a 55%,#461c1d 100%)"><div class="pair"><a class="lglink" href="https://www.shelter.fi" target="_blank" rel="noopener" aria-label="Shelter (opens in a new tab)"><img loading="lazy" decoding="async" src="logo-shelter.png" alt="Shelter" width="750" height="225"></a><span class="sep" aria-hidden="true"></span><a class="lglink" href="https://www.ravintolateller.fi" target="_blank" rel="noopener" aria-label="Teller (opens in a new tab)"><img loading="lazy" decoding="async" src="logo-teller-yellow.svg" alt="Teller" width="350" height="167"></a></div></div>
       <div>
         <blockquote>"Acclaimed kitchens, English-first websites, and guests searching in Finnish. Fixing that filled tables."</blockquote>
         <p class="by">Shelter (MICHELIN Guide) &amp; Teller (No. 16, Finland's 50 Best 2026)<br>Through my own company</p>
@@ -425,7 +426,7 @@ html,body{overflow-x:hidden}
     </article>
 
     <article class="panel rv" id="case-retail">
-      <div class="visual" style="background:linear-gradient(135deg,#c2410c 0%,#ff5000 55%,#ffb48a 100%)"><img loading="lazy" decoding="async" class="wht" src="logo-size.png" alt="" width="640" height="234"></div>
+      <div class="visual" style="background:linear-gradient(135deg,#c2410c 0%,#ff5000 55%,#ffb48a 100%)"><a class="lglink" href="https://www.size.co.uk" target="_blank" rel="noopener" aria-label="size? (opens in a new tab)"><img loading="lazy" decoding="async" class="wht" src="logo-size.png" alt="" width="640" height="234"></a></div>
       <div>
         <blockquote>"From helping JD Sports Finland reach €20,000 a day to digital marketing for size?, inside a FTSE 100 company."</blockquote>
         <p class="by">JD Sports (Copywriter) / size? (Digital Marketing Executive) · Amsterdam · 2018–2020</p>
