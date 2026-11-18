@@ -17,7 +17,10 @@
   // Where colour lives on each page: from the top of `from` to the bottom of `to`
   // (+ `extend` px), with fades given as a share of the field height.
   var LAYOUT = {
-    home:    [{ from: '.hero', to: '#work', fadeTop: 0, fadeBottom: 0.5, strength: 0.75 },
+    // home (Tomas 2026-11-18): hero tinted; the "Experience at" strip and the work grid pure white;
+    // "What I do" through "Results from client work" in one field; contact at the end
+    home:    [{ from: '.hero', to: '.hero', fadeTop: 0, fadeBottom: 0.35, strength: 0.75 },
+              { from: '#do', to: '#results', fadeTop: 0.22, fadeBottom: 0.22, strength: 0.8 },
               { from: '#contact', to: 'footer', fadeTop: 0.55, fadeBottom: 0, strength: 0.8 }],
     landing: [{ from: '.lp-hero', to: '#why', fadeTop: 0, fadeBottom: 0.45, strength: 0.75 },
               { from: '#contact', to: 'footer', fadeTop: 0.55, fadeBottom: 0, strength: 0.8 }],
