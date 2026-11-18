@@ -54,7 +54,7 @@
     var blobs = pal.map(function (c, i) {
       var s = index * 1.7 + i * 2.3;
       return { c: c, x: (Math.sin(s) + 1) / 2, y: (Math.cos(s * 1.3) + 1) / 2,
-        r: i === 0 ? 0.62 : 0.48, a: (i === 0 ? 0.55 : 0.42) * (opt.hero ? 0.7 : 1),
+        r: i === 0 ? 0.62 : 0.48, a: (i === 0 ? 0.55 : 0.42) * (opt.hero ? 1 : 1),
         sx: 0.06 + (i % 3) * 0.025, sy: 0.05 + ((i + 1) % 3) * 0.02, ph: s };
     });
     var visible = false, raf = 0, t0 = performance.now();
