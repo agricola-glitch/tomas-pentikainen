@@ -1,6 +1,7 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
+<script>document.documentElement.classList.remove("no-js")</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tomas Pentikäinen | Finnish SEO Strategist</title>
@@ -273,6 +274,26 @@ html,body{overflow-x:hidden}
 .lglink{display:inline-flex;align-items:center;justify-content:center;color:inherit;transition:opacity .2s}.lglink:hover{opacity:.7}
 .numbers-note{text-align:center;color:var(--ink-50);font-size:17px;margin:32px auto 0;max-width:640px}
 .nav .contact i{background:#00c2e8;color:#0a0a0a}.nav .contact:hover i{background:#00b2d6}
+
+/* hero search: real Finnish searches typing out, with what makes each one tricky */
+.qs{margin:-6px 0 30px;max-width:560px}
+.qs-box{display:flex;align-items:center;gap:14px;background:#fff;border-radius:999px;padding:15px 24px;box-shadow:0 0 0 1px var(--line),0 18px 40px -24px rgba(0,80,110,.35);font-size:20px;min-height:58px;cursor:default}
+.qs-box svg{width:19px;height:19px;color:rgba(10,10,10,.4);flex-shrink:0}
+.qs-text{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.qs-caret{width:2px;height:24px;background:#00c2e8;margin-left:-11px;animation:qsblink 1s steps(1) infinite;flex-shrink:0}
+@keyframes qsblink{50%{opacity:0}}
+.qs-note{display:block;margin:12px 6px 0;font-size:15px;line-height:1.4;color:var(--ink-50);min-height:42px;opacity:0;transform:translateY(4px);transition:opacity .4s,transform .4s}
+.qs-note.on{opacity:1;transform:none}
+.qs-note b{color:var(--ink);font-weight:500}
+.qs-note i{font-style:normal;color:#00a6cc}
+.qs-note:hover span{text-decoration:underline;text-underline-offset:3px}
+.qs-dots{display:flex;gap:8px;margin:6px 6px 0}
+.qs-dots button{width:8px;height:8px;border-radius:999px;border:0;padding:0;background:rgba(10,10,10,.18);cursor:pointer;transition:width .3s,background .3s}
+.qs-dots button.on{width:24px;background:#00c2e8}
+.qs-dots button:focus-visible{outline:2px solid #00c2e8;outline-offset:3px}
+.qs-static{display:none;list-style:none;margin:12px 0 0;padding:0;font-size:15px;line-height:1.7}
+.qs-static a{color:var(--ink-50)}
+.no-js .qs-box,.no-js .qs-note,.no-js .qs-dots{display:none}.no-js .qs-static{display:block}
 </style>
 <script src="/consent.js" defer></script>
 <script src="/aurora.js?v=9" defer></script>
@@ -297,6 +318,12 @@ html,body{overflow-x:hidden}
   <div class="copy">
     <p class="who">Tomas Pentikäinen · Finnish SEO strategist</p>
     <h1>I get brands found in <strong class="sky">Finnish search</strong> and <strong class="sky">AI answers</strong>.</h1>
+    <div class="qs" id="qs" aria-label="Real Finnish searches I work with">
+      <div class="qs-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 20 20"/></svg><span class="qs-text" lang="fi"></span><span class="qs-caret" aria-hidden="true"></span></div>
+      <a class="qs-note" href="/finnish-seo/finnish-keyword-research/"><b></b> <span></span> <i aria-hidden="true">→</i></a>
+      <div class="qs-dots"><button type="button" aria-label="Show the search kengät naisille" data-i="0"></button><button type="button" aria-label="Show the search pöytävaraus helsinki" data-i="1"></button><button type="button" aria-label="Show the search sijoittaminen aloittelijalle" data-i="2"></button><button type="button" aria-label="Show the search hammaslääkäri tampere" data-i="3"></button><button type="button" aria-label="Show the search toimituskulut" data-i="4"></button><button type="button" aria-label="Show the search kuusi palaa" data-i="5"></button></div>
+      <ul class="qs-static"><li><a href="/finnish-seo/finnish-keyword-research/"><span lang="fi">kengät naisille</span> · women's shoes</a></li><li><a href="/finnish-seo/finnish-website-localization/"><span lang="fi">pöytävaraus helsinki</span> · table booking Helsinki</a></li><li><a href="/finnish-seo/do-you-need-a-finnish-website/"><span lang="fi">sijoittaminen aloittelijalle</span> · investing for beginners</a></li><li><a href="/finnish-seo/finnish-keyword-research/"><span lang="fi">hammaslääkäri tampere</span> · dentist Tampere</a></li><li><a href="/finnish-seo/finnish-website-localization/"><span lang="fi">toimituskulut</span> · delivery costs</a></li><li><a href="/finnish-seo/do-you-need-a-finnish-website/"><span lang="fi">kuusi palaa</span> · six pieces, or the spruce is burning?</a></li></ul>
+    </div>
     <div class="capsule"><span>Helsinki</span><span>Remote worldwide</span><a href="mailto:tomas@tomaspentikainen.com">tomas@tomaspentikainen.com</a></div>
   </div>
   <div class="photo">
@@ -561,6 +588,32 @@ html,body{overflow-x:hidden}
 </script>
 <script>
 document.querySelectorAll('a[href="#top"]'+(location.pathname==='/'?',a.logo':'')).forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();window.scrollTo({top:0,behavior:'smooth'});if(location.hash)history.replaceState(null,'',location.pathname+location.search);});});
+</script>
+<script>
+(function(){
+  var root=document.getElementById('qs'); if(!root) return;
+  var Q=[["kengät naisille", "women's shoes", "Finns type the plural with an ending, not the dictionary word", "/finnish-seo/finnish-keyword-research/"], ["pöytävaraus helsinki", "table booking Helsinki", "one compound word a translation never produces", "/finnish-seo/finnish-website-localization/"], ["sijoittaminen aloittelijalle", "investing for beginners", "a trust category where tone decides the click", "/finnish-seo/do-you-need-a-finnish-website/"], ["hammaslääkäri tampere", "dentist Tampere", "local intent, and the city name bends: tampereella", "/finnish-seo/finnish-keyword-research/"], ["toimituskulut", "delivery costs", "what Finns check before they buy anything online", "/finnish-seo/finnish-website-localization/"], ["kuusi palaa", "six pieces, or the spruce is burning?", "context only a native reader catches", "/finnish-seo/do-you-need-a-finnish-website/"]];
+  var text=root.querySelector('.qs-text'), note=root.querySelector('.qs-note'), dots=[].slice.call(root.querySelectorAll('.qs-dots button'));
+  var still=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var i=0, t=0, paused=false, phase='type', pos=0;
+  function setNote(k){var q=Q[k]; note.href=q[3]; note.querySelector('b').textContent=q[1]+' ·'; note.querySelector('span').textContent=q[2]; dots.forEach(function(d,n){d.classList.toggle('on',n===k)});}
+  function show(k){clearTimeout(t); i=k; pos=Q[k][0].length; text.textContent=Q[k][0]; setNote(k); note.classList.add('on'); phase='hold'; if(!still) t=setTimeout(step,paused?60000:3800);}
+  function step(){
+    if(paused){t=setTimeout(step,400);return;}
+    var q=Q[i][0];
+    if(phase==='type'){ if(pos===0){setNote(i);note.classList.remove('on');} pos++; text.textContent=q.slice(0,pos);
+      if(pos>=q.length){phase='hold';note.classList.add('on');t=setTimeout(step,3800);} else t=setTimeout(step,70+Math.random()*60); }
+    else if(phase==='hold'){phase='erase';note.classList.remove('on');t=setTimeout(step,250);}
+    else { pos--; text.textContent=q.slice(0,pos); if(pos<=0){i=(i+1)%Q.length;phase='type';t=setTimeout(step,350);} else t=setTimeout(step,28); }
+  }
+  dots.forEach(function(d){d.addEventListener('click',function(){show(+d.dataset.i)});});
+  root.addEventListener('mouseenter',function(){paused=true});
+  root.addEventListener('mouseleave',function(){paused=false});
+  root.addEventListener('focusin',function(){paused=true});
+  root.addEventListener('focusout',function(){paused=false});
+  if(still){show(0);return;}
+  t=setTimeout(step,900);
+})();
 </script>
 </body>
 </html>
