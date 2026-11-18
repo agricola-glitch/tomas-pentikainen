@@ -18,3 +18,4 @@ Contact: tomas@tomaspentikainen.com
 - [How to localize a website for Finland](https://tomaspentikainen.com/finnish-seo/finnish-website-localization/): keywords, tone (sinä/te), prices with VAT, payments, Swedish, hreflang
 - [Finnish keyword research: why translated keywords fail](https://tomaspentikainen.com/finnish-seo/finnish-keyword-research/): cases, compound words, everyday vocabulary, reading small search volumes
 - [Do you need a Finnish-language website to sell in Finland?](https://tomaspentikainen.com/finnish-seo/do-you-need-a-finnish-website/): when English is enough and which pages to localize first
+- [How to choose an SEO consultant for Finland](https://tomaspentikainen.com/finnish-seo/how-to-choose-a-finnish-seo-consultant/): freelancer vs agency, questions to ask before hiring, red flags, a good first month
