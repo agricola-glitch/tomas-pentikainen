@@ -21,6 +21,7 @@
     // "What I do" through "Results from client work" in one field; contact at the end
     home:    [{ from: '.hero', to: '.hero', fadeTop: 0, fadeBottom: 0.35, strength: 0.75 },
               { from: '#do', to: '#results', fadeTop: 0.22, fadeBottom: 0.22, strength: 0.8 },
+              { from: '#about', to: '#about', fadeTop: 0.3, fadeBottom: 0.3, strength: 0.8 },
               { from: '#contact', to: 'footer', fadeTop: 0.55, fadeBottom: 0, strength: 0.8 }],
     landing: [{ from: '.lp-hero', to: '#why', fadeTop: 0, fadeBottom: 0.45, strength: 0.75 },
               { from: '#contact', to: 'footer', fadeTop: 0.55, fadeBottom: 0, strength: 0.8 }],
