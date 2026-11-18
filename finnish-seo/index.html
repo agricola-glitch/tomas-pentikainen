@@ -27,7 +27,7 @@
 :root{
   --ink:#0a0a0a;--ink-50:rgba(10,10,10,.64);--line:rgba(10,10,10,.1);
   --bg:#fff;--light:#f5f5f7;--soft:#ececec;--black:#0a0a0a;
-  --sky:#0ea5e9;--sky-ink:#0369a1;
+  --sky:#00c2e8;--sky-ink:#007a99;
   --font:'Inter Tight',helvetica,arial,sans-serif;
 }
 *{box-sizing:border-box}
@@ -85,7 +85,7 @@ strong{font-weight:600}
 /* SECTIONS */
 section{padding:140px 0}
 @media (max-width:640px){section{padding:88px 0}}
-.wash{background:radial-gradient(50% 40% at 0% 25%,rgba(125,211,252,.28),transparent 70%),radial-gradient(45% 40% at 100% 75%,rgba(187,247,208,.42),transparent 70%),#fff}
+.wash{background:radial-gradient(50% 40% at 0% 25%,rgba(142,227,245,.28),transparent 70%),radial-gradient(45% 40% at 100% 75%,rgba(187,247,208,.42),transparent 70%),#fff}
 .statement{text-align:center}
 .statement h2{font-weight:300;font-size:clamp(32px,3.9vw,56px);line-height:1.1;letter-spacing:-.025em;max-width:1000px;margin:0 auto 30px}
 .small-cap{font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-weight:500;margin:0 0 18px}
@@ -180,7 +180,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
 .media.split{display:grid;grid-template-columns:1fr 1fr;place-items:stretch}
 .media.split::after{display:none}
 .media.split .half{display:grid;place-items:center;position:relative;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
-.media.split .cm{background:linear-gradient(135deg,#0c4a6e 0%,#0284c7 60%,#38bdf8 100%)}
+.media.split .cm{background:linear-gradient(135deg,#006d87 0%,#00a6cc 60%,#33d0ee 100%)}
 .media.split .br{background:#fafafa;border-left:1px solid rgba(10,10,10,.06)}
 .media.split .cm img{max-width:72%;max-height:none;height:auto}
 .media.split .br .bt{font-size:clamp(17px,1.6vw,22px)}
@@ -257,7 +257,7 @@ html,body{overflow-x:hidden}
 .rv{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
 .rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.card .media .bg{transition:none}}
-.hub{position:relative;margin-top:12px;display:grid;grid-template-columns:1fr 1.25fr;gap:40px;align-items:center;border:1px solid rgba(125,211,252,.35);background:linear-gradient(135deg,rgba(125,211,252,.12),rgba(255,255,255,.03));border-radius:8px;padding:36px}
+.hub{position:relative;margin-top:12px;display:grid;grid-template-columns:1fr 1.25fr;gap:40px;align-items:center;border:1px solid rgba(142,227,245,.35);background:linear-gradient(135deg,rgba(142,227,245,.12),rgba(255,255,255,.03));border-radius:8px;padding:36px}
 .hub h3{font-weight:500;font-size:clamp(24px,2.4vw,32px);letter-spacing:-.02em;line-height:1.15;margin:0 0 12px}
 .hub p{margin:0;color:rgba(255,255,255,.62);font-size:16.5px}
 .hub ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:20px 28px}
@@ -418,7 +418,7 @@ html,body{overflow-x:hidden}
   <div class="wrap">
    <div class="blackblock rv">
     <div class="head">
-      <p class="small-cap" style="color:#7dd3fc">Why work direct</p>
+      <p class="small-cap" style="color:#8ee3f5">Why work direct</p>
       <h2>Senior work, <strong>without the agency overhead</strong>.</h2>
     </div>
     <div class="cards3">
@@ -472,10 +472,10 @@ html,body{overflow-x:hidden}
   <div class="wrap">
     <h2 class="rv">Guides to <strong class="sky">SEO in Finland</strong>.</h2>
     <div class="lp-cards g4 rv">
-      <article class="guide"><a class="cover" href="/finnish-seo/finnish-website-localization/" tabindex="-1" aria-hidden="true" style="background:linear-gradient(135deg,#0c4a6e 0%,#0284c7 60%,#7dd3fc 100%)"><span lang="fi">lokalisointi</span></a><h3><a href="/finnish-seo/finnish-website-localization/">How to localize a website for Finland</a></h3><p>Keywords, tone, prices, payments, Swedish and hreflang: what translation leaves out.</p></article>
-      <article class="guide"><a class="cover" href="/finnish-seo/finnish-keyword-research/" tabindex="-1" aria-hidden="true" style="background:linear-gradient(135deg,#0a0a0a 0%,#1f2937 60%,#0369a1 100%)"><span lang="fi">kengät, kenkiä</span></a><h3><a href="/finnish-seo/finnish-keyword-research/">Why translated keywords fail</a></h3><p>Cases, compound words and everyday vocabulary, with real Finnish examples.</p></article>
-      <article class="guide"><a class="cover" href="/finnish-seo/do-you-need-a-finnish-website/" tabindex="-1" aria-hidden="true" style="background:linear-gradient(135deg,#075985 0%,#0ea5e9 55%,#bbf7d0 100%)"><span lang="fi">suomeksi?</span></a><h3><a href="/finnish-seo/do-you-need-a-finnish-website/">Do you need a Finnish website?</a></h3><p>When English is enough in Finland, and which pages to localize first.</p></article>
-      <article class="guide"><a class="cover" href="/finnish-seo/how-to-choose-a-finnish-seo-consultant/" tabindex="-1" aria-hidden="true" style="background:linear-gradient(135deg,#0369a1 0%,#00c2e8 60%,#e0f7fc 100%)"><span>who to hire?</span></a><h3><a href="/finnish-seo/how-to-choose-a-finnish-seo-consultant/">How to choose an SEO consultant for Finland</a></h3><p>Freelancer or agency, what to ask before hiring, and the red flags.</p></article>
+      <article class="guide"><a class="cover" href="/finnish-seo/finnish-website-localization/" tabindex="-1" aria-hidden="true" style="background:linear-gradient(135deg,#006d87 0%,#00a6cc 60%,#8ee3f5 100%)"><span lang="fi">lokalisointi</span></a><h3><a href="/finnish-seo/finnish-website-localization/">How to localize a website for Finland</a></h3><p>Keywords, tone, prices, payments, Swedish and hreflang: what translation leaves out.</p></article>
+      <article class="guide"><a class="cover" href="/finnish-seo/finnish-keyword-research/" tabindex="-1" aria-hidden="true" style="background:linear-gradient(135deg,#0a0a0a 0%,#1f2937 60%,#007a99 100%)"><span lang="fi">kengät, kenkiä</span></a><h3><a href="/finnish-seo/finnish-keyword-research/">Why translated keywords fail</a></h3><p>Cases, compound words and everyday vocabulary, with real Finnish examples.</p></article>
+      <article class="guide"><a class="cover" href="/finnish-seo/do-you-need-a-finnish-website/" tabindex="-1" aria-hidden="true" style="background:linear-gradient(135deg,#006d87 0%,#00c2e8 55%,#bbf7d0 100%)"><span lang="fi">suomeksi?</span></a><h3><a href="/finnish-seo/do-you-need-a-finnish-website/">Do you need a Finnish website?</a></h3><p>When English is enough in Finland, and which pages to localize first.</p></article>
+      <article class="guide"><a class="cover" href="/finnish-seo/how-to-choose-a-finnish-seo-consultant/" tabindex="-1" aria-hidden="true" style="background:linear-gradient(135deg,#007a99 0%,#00c2e8 60%,#e0f7fc 100%)"><span>who to hire?</span></a><h3><a href="/finnish-seo/how-to-choose-a-finnish-seo-consultant/">How to choose an SEO consultant for Finland</a></h3><p>Freelancer or agency, what to ask before hiring, and the red flags.</p></article>
     </div>
   </div>
 </section>

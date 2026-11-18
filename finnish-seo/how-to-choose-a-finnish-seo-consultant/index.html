@@ -30,7 +30,7 @@
 :root{
   --ink:#0a0a0a;--ink-50:rgba(10,10,10,.64);--line:rgba(10,10,10,.1);
   --bg:#fff;--light:#f5f5f7;--soft:#ececec;--black:#0a0a0a;
-  --sky:#0ea5e9;--sky-ink:#0369a1;
+  --sky:#00c2e8;--sky-ink:#007a99;
   --font:'Inter Tight',helvetica,arial,sans-serif;
 }
 *{box-sizing:border-box}
@@ -88,7 +88,7 @@ strong{font-weight:600}
 /* SECTIONS */
 section{padding:140px 0}
 @media (max-width:640px){section{padding:88px 0}}
-.wash{background:radial-gradient(50% 40% at 0% 25%,rgba(125,211,252,.28),transparent 70%),radial-gradient(45% 40% at 100% 75%,rgba(187,247,208,.42),transparent 70%),#fff}
+.wash{background:radial-gradient(50% 40% at 0% 25%,rgba(142,227,245,.28),transparent 70%),radial-gradient(45% 40% at 100% 75%,rgba(187,247,208,.42),transparent 70%),#fff}
 .statement{text-align:center}
 .statement h2{font-weight:300;font-size:clamp(32px,3.9vw,56px);line-height:1.1;letter-spacing:-.025em;max-width:1000px;margin:0 auto 30px}
 .small-cap{font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-weight:500;margin:0 0 18px}
@@ -183,7 +183,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
 .media.split{display:grid;grid-template-columns:1fr 1fr;place-items:stretch}
 .media.split::after{display:none}
 .media.split .half{display:grid;place-items:center;position:relative;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
-.media.split .cm{background:linear-gradient(135deg,#0c4a6e 0%,#0284c7 60%,#38bdf8 100%)}
+.media.split .cm{background:linear-gradient(135deg,#006d87 0%,#00a6cc 60%,#33d0ee 100%)}
 .media.split .br{background:#fafafa;border-left:1px solid rgba(10,10,10,.06)}
 .media.split .cm img{max-width:72%;max-height:none;height:auto}
 .media.split .br .bt{font-size:clamp(17px,1.6vw,22px)}
@@ -260,7 +260,7 @@ html,body{overflow-x:hidden}
 .rv{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
 .rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.card .media .bg{transition:none}}
-.hub{position:relative;margin-top:12px;display:grid;grid-template-columns:1fr 1.25fr;gap:40px;align-items:center;border:1px solid rgba(125,211,252,.35);background:linear-gradient(135deg,rgba(125,211,252,.12),rgba(255,255,255,.03));border-radius:8px;padding:36px}
+.hub{position:relative;margin-top:12px;display:grid;grid-template-columns:1fr 1.25fr;gap:40px;align-items:center;border:1px solid rgba(142,227,245,.35);background:linear-gradient(135deg,rgba(142,227,245,.12),rgba(255,255,255,.03));border-radius:8px;padding:36px}
 .hub h3{font-weight:500;font-size:clamp(24px,2.4vw,32px);letter-spacing:-.02em;line-height:1.15;margin:0 0 12px}
 .hub p{margin:0;color:rgba(255,255,255,.62);font-size:16.5px}
 .hub ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:20px 28px}
@@ -376,7 +376,7 @@ html,body{overflow-x:hidden}
 .cmp-col.muted b{color:rgba(10,10,10,.45);text-decoration:line-through;text-decoration-color:rgba(10,10,10,.25)}
 .cmp-col.muted .cmp-h{color:var(--ink-50)}
 .cmp-col.good{background:#0a0a0a;color:#fff}
-.cmp-col.good .cmp-h{color:#7dd3fc}
+.cmp-col.good .cmp-h{color:#8ee3f5}
 .cmp-col.good p:not(.cmp-h){border-top-color:rgba(255,255,255,.14)}
 .cmp-col.good span{color:rgba(255,255,255,.6)}
 .tree{background:var(--light);border-radius:18px;padding:34px 30px;text-align:center}
@@ -389,8 +389,8 @@ html,body{overflow-x:hidden}
 .dec-col li{border-top:1px solid var(--line);padding:11px 0;font-size:17px;line-height:1.35;margin:0}
 .dec-col.light{background:var(--light)}
 .dec-col.light .cmp-h{color:var(--ink-50)}
-.dec-col.dark{background:linear-gradient(135deg,#0c4a6e 0%,#0369a1 60%,#0ea5e9 100%);color:#fff}
-.dec-col.dark .cmp-h{color:#e0f2fe}
+.dec-col.dark{background:linear-gradient(135deg,#006d87 0%,#007a99 60%,#00c2e8 100%);color:#fff}
+.dec-col.dark .cmp-h{color:#e0f7fc}
 .dec-col.dark li{border-top-color:rgba(255,255,255,.22)}
 @media (max-width:900px){.fig{margin:36px 0 40px}.fig figcaption{margin:12px 0 0}}
 @media (max-width:640px){.cmp,.dec{grid-template-columns:1fr}}
