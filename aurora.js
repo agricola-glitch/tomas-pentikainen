@@ -27,14 +27,14 @@
     'filter:blur(48px) saturate(1.15);opacity:.9;' +
     '-webkit-mask-image:linear-gradient(180deg,transparent 0%,#000 18%,#000 82%,transparent 100%);' +
     'mask-image:linear-gradient(180deg,transparent 0%,#000 18%,#000 82%,transparent 100%)}' +
-    /* hero: the first thing people see, so stronger colour; fades out towards the photo and the logo strip */
+    /* hero: the first thing people see; a subtle tint (Tomas 2026-11-18: keep it subtle); fades out towards the photo and the logo strip */
     '.hero.aurora{isolation:isolate}.hero.aurora .photo{z-index:1}' +
-    '.hero.aurora>canvas.aurora-c{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;filter:blur(56px) saturate(1.2);' +
+    '.hero.aurora>canvas.aurora-c{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;filter:blur(64px);' +
     '-webkit-mask-image:linear-gradient(90deg,#000 0%,#000 55%,transparent 88%),linear-gradient(180deg,#000 70%,transparent 100%);-webkit-mask-composite:source-in;' +
     'mask-image:linear-gradient(90deg,#000 0%,#000 55%,transparent 88%),linear-gradient(180deg,#000 70%,transparent 100%);mask-composite:intersect}' +
     /* other page heroes (landing, guides, 404): full-width field, fades out at the bottom */
     '.aurora-full{position:relative;isolation:isolate}' +
-    '.aurora-full>canvas.aurora-c{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none;filter:blur(56px) saturate(1.2);' +
+    '.aurora-full>canvas.aurora-c{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none;filter:blur(64px);' +
     '-webkit-mask-image:linear-gradient(180deg,#000 72%,transparent 100%);mask-image:linear-gradient(180deg,#000 72%,transparent 100%)}';
   document.head.appendChild(css);
 
@@ -54,7 +54,7 @@
     var blobs = pal.map(function (c, i) {
       var s = index * 1.7 + i * 2.3;
       return { c: c, x: (Math.sin(s) + 1) / 2, y: (Math.cos(s * 1.3) + 1) / 2,
-        r: i === 0 ? 0.62 : 0.48, a: (i === 0 ? 0.55 : 0.42) * (opt.hero ? 1.45 : 1),
+        r: i === 0 ? 0.62 : 0.48, a: (i === 0 ? 0.55 : 0.42) * (opt.hero ? 0.7 : 1),
         sx: 0.06 + (i % 3) * 0.025, sy: 0.05 + ((i + 1) % 3) * 0.02, ph: s };
     });
     var visible = false, raf = 0, t0 = performance.now();
