@@ -385,6 +385,28 @@ html,body{overflow-x:hidden}
 @media (max-width:640px){.cmp,.dec{grid-template-columns:1fr}}
 @media (max-width:640px){.art-hero{padding:120px 0 44px}.article{font-size:18px;padding-top:44px}}
 .nav .contact i{background:#00c2e8;color:#0a0a0a}.nav .contact:hover i{background:#00b2d6}
+
+/* guide visuals 2026-11-18: typographic cover, author byline + box, real Google.fi autocomplete, steps */
+.art-hero .ah{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:56px;align-items:center}
+.ah-cover{aspect-ratio:4/3;border-radius:22px;display:flex;align-items:flex-end;padding:28px 30px;color:#fff;font-weight:300;font-size:clamp(34px,3.6vw,56px);letter-spacing:-.03em;line-height:1;box-shadow:0 30px 60px -32px rgba(0,109,135,.5)}
+.byline{display:flex;align-items:center;gap:12px;margin:0}
+.byline img{width:40px;height:40px;border-radius:50%;object-fit:cover;object-position:50% 20%}
+.author{display:flex;gap:22px;align-items:center;background:var(--light);border-radius:20px;padding:24px 26px;margin:56px 0 8px}
+.author img{width:76px;height:76px;border-radius:50%;object-fit:cover;object-position:50% 20%;flex-shrink:0}
+.author p{margin:0!important;font-size:17px;line-height:1.5}
+.author a{color:var(--sky-ink)}
+.sg{max-width:580px;margin:0 auto;background:#fff;border-radius:26px;box-shadow:0 0 0 1px var(--line),0 24px 48px -28px rgba(0,0,0,.22);overflow:hidden;font-size:17px}
+.sg .q{display:flex;align-items:center;gap:14px;padding:15px 22px;border-bottom:1px solid var(--line)}
+.sg ul{list-style:none;margin:0;padding:8px 0}
+.sg li{display:flex;align-items:center;gap:14px;padding:8px 22px;margin:0}
+.sg svg{width:17px;height:17px;flex-shrink:0;color:rgba(10,10,10,.4)}
+.sg li b{font-weight:600}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.steps div{background:var(--light);border-radius:18px;padding:22px 20px}
+.steps b{display:block;font-weight:300;font-size:34px;letter-spacing:-.03em;color:#008cb0;margin:0 0 10px}
+.steps span{display:block;font-size:16px;line-height:1.4}
+@media (max-width:900px){.art-hero .ah{grid-template-columns:1fr;gap:32px}.ah-cover{aspect-ratio:16/9}.steps{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.author{flex-direction:column;align-items:flex-start}}
 </style>
 <script src="/consent.js" defer></script>
 <script src="/aurora.js?v=9" defer></script>
@@ -405,11 +427,11 @@ html,body{overflow-x:hidden}
 </header>
 
 <div class="art-hero" id="top">
-  <div class="wrap">
+  <div class="wrap"><div class="ah"><div>
     <p class="crumbs"><a href="/finnish-seo/">SEO in Finland</a> · Guide</p>
     <h1>Do you need a Finnish-language website to sell in Finland?</h1>
-    <p class="meta">By Tomas Pentikäinen, Finnish SEO strategist · 17 November 2026</p>
-  </div>
+    <p class="meta byline"><img src="/portfolio-tomas.jpg" alt="" width="40" height="40">By Tomas Pentikäinen, Finnish SEO strategist · 17 November 2026</p>
+  </div><div class="ah-cover" aria-hidden="true" style="background:linear-gradient(135deg,#006d87 0%,#00c2e8 55%,#bbf7d0 100%)"><span lang="fi">suomeksi?</span></div></div></div>
 </div>
 
 <main id="main">
@@ -419,6 +441,7 @@ html,body{overflow-x:hidden}
 <p>The good news is that you rarely need to translate everything at once. A handful of well-built Finnish pages usually covers most of the demand.</p>
 <h2>Finns speak English, so why does the language matter?</h2>
 <p>Reading English and searching in English are different habits. A Finn who reads English product reviews without effort still types <em lang="fi">kahvinkeitin</em> when looking for a coffee maker, and <em lang="fi">putkimies Espoo</em> when a pipe leaks.</p>
+<figure class="fig" lang="fi"><div class="sg" role="img" aria-label="Google.fi autocomplete suggestions for kahvinkeitin"><div class="q"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 20 20"/></svg><span>kahvinkeitin</span></div><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 20 20"/></svg><span>kahvinkeitin</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 20 20"/></svg><span>kahvinkeitin<b> prisma</b></span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 20 20"/></svg><span>kahvinkeitin<b> tokmanni</b></span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 20 20"/></svg><span>kahvinkeitin<b> puhdistus</b></span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 20 20"/></svg><span>kahvinkeitin<b> tarjous</b></span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 20 20"/></svg><span>kahvinkeitin<b> citymarket</b></span></li></ul></div><figcaption lang="en">Figure 1. Google.fi autocomplete for <i lang="fi">kahvinkeitin</i> (coffee maker), 18 November 2026. The suggestions are Finnish retailers (Prisma, Tokmanni, Citymarket) and Finnish questions such as cleaning (<i lang="fi">puhdistus</i>) and deals (<i lang="fi">tarjous</i>). An English page competes in none of them.</figcaption></figure>
 <p>Search engines follow the language of the query. A Finnish search returns Finnish pages, so an English page competes only for the smaller share of searches made in English. The same applies to AI assistants: ChatGPT, Claude, Perplexity and Google's AI Overviews usually answer Finnish questions from Finnish sources.</p>
 <p>Trust plays a part as well. When delivery terms, returns and customer service are in Finnish, a buyer can see the company is ready to serve them. When the checkout suddenly switches to English, many shoppers stop there.</p>
 <h2>When an English website is enough</h2>
@@ -434,7 +457,7 @@ html,body{overflow-x:hidden}
       <ul><li>Selling to consumers</li><li>Local services</li><li>Trust categories: finance, health, insurance</li><li>Competitors already rank in Finnish</li></ul>
     </div>
   </div>
-  <figcaption>Figure 1. When an English site can carry you in Finland, and when it cannot.</figcaption>
+  <figcaption>Figure 2. When an English site can carry you in Finland, and when it cannot.</figcaption>
 </figure>
 <h2>When you need Finnish pages</h2>
 <p>You need Finnish when you sell to consumers, offer a local service or work in a category where trust decides the sale, such as finance, health, insurance or anything people buy for their home. It also matters when competitors already rank with Finnish pages: an English page will struggle to outrank a Finnish one for a Finnish query.</p>
@@ -445,6 +468,7 @@ html,body{overflow-x:hidden}
 <h2>What a partial Finnish site needs</h2>
 <p>A partial Finnish site works if it is technically clean. Each Finnish page needs its own URL, hreflang tags linking it to the English version, and a Finnish meta title and description. Navigation should not drop Finnish visitors onto English pages without warning. The <a href="/finnish-seo/finnish-website-localization/">localization checklist</a> covers the details.</p>
 <p>Not sure whether your category needs Finnish pages? Searches in your category answer that quickly. <a href="/finnish-seo/#check">Get a free Finnish search check</a>, and within a week I will show you the five Finnish searches your site misses.</p>
+<aside class="author" aria-label="About the author"><img src="/portfolio-tomas.jpg" alt="Tomas Pentikäinen, Finnish SEO specialist in Helsinki" width="76" height="76" loading="lazy"><p>I'm Tomas Pentikäinen, a native Finnish SEO strategist in Helsinki. I plan and write content that gets brands found in Finnish search and AI answers, for companies like Coinmotion and JD Sports and for MICHELIN Guide restaurants. <a href="/#about">More about me</a></p></aside>
   </article>
   <aside class="more" aria-label="More guides">
     <h2>More guides on SEO in Finland</h2>

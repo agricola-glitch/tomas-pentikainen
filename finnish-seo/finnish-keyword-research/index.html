@@ -385,6 +385,28 @@ html,body{overflow-x:hidden}
 @media (max-width:640px){.cmp,.dec{grid-template-columns:1fr}}
 @media (max-width:640px){.art-hero{padding:120px 0 44px}.article{font-size:18px;padding-top:44px}}
 .nav .contact i{background:#00c2e8;color:#0a0a0a}.nav .contact:hover i{background:#00b2d6}
+
+/* guide visuals 2026-11-18: typographic cover, author byline + box, real Google.fi autocomplete, steps */
+.art-hero .ah{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:56px;align-items:center}
+.ah-cover{aspect-ratio:4/3;border-radius:22px;display:flex;align-items:flex-end;padding:28px 30px;color:#fff;font-weight:300;font-size:clamp(34px,3.6vw,56px);letter-spacing:-.03em;line-height:1;box-shadow:0 30px 60px -32px rgba(0,109,135,.5)}
+.byline{display:flex;align-items:center;gap:12px;margin:0}
+.byline img{width:40px;height:40px;border-radius:50%;object-fit:cover;object-position:50% 20%}
+.author{display:flex;gap:22px;align-items:center;background:var(--light);border-radius:20px;padding:24px 26px;margin:56px 0 8px}
+.author img{width:76px;height:76px;border-radius:50%;object-fit:cover;object-position:50% 20%;flex-shrink:0}
+.author p{margin:0!important;font-size:17px;line-height:1.5}
+.author a{color:var(--sky-ink)}
+.sg{max-width:580px;margin:0 auto;background:#fff;border-radius:26px;box-shadow:0 0 0 1px var(--line),0 24px 48px -28px rgba(0,0,0,.22);overflow:hidden;font-size:17px}
+.sg .q{display:flex;align-items:center;gap:14px;padding:15px 22px;border-bottom:1px solid var(--line)}
+.sg ul{list-style:none;margin:0;padding:8px 0}
+.sg li{display:flex;align-items:center;gap:14px;padding:8px 22px;margin:0}
+.sg svg{width:17px;height:17px;flex-shrink:0;color:rgba(10,10,10,.4)}
+.sg li b{font-weight:600}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.steps div{background:var(--light);border-radius:18px;padding:22px 20px}
+.steps b{display:block;font-weight:300;font-size:34px;letter-spacing:-.03em;color:#008cb0;margin:0 0 10px}
+.steps span{display:block;font-size:16px;line-height:1.4}
+@media (max-width:900px){.art-hero .ah{grid-template-columns:1fr;gap:32px}.ah-cover{aspect-ratio:16/9}.steps{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.author{flex-direction:column;align-items:flex-start}}
 </style>
 <script src="/consent.js" defer></script>
 <script src="/aurora.js?v=9" defer></script>
@@ -405,11 +427,11 @@ html,body{overflow-x:hidden}
 </header>
 
 <div class="art-hero" id="top">
-  <div class="wrap">
+  <div class="wrap"><div class="ah"><div>
     <p class="crumbs"><a href="/finnish-seo/">SEO in Finland</a> · Guide</p>
     <h1>Finnish keyword research: why translated keywords fail</h1>
-    <p class="meta">By Tomas Pentikäinen, Finnish SEO strategist · 17 November 2026</p>
-  </div>
+    <p class="meta byline"><img src="/portfolio-tomas.jpg" alt="" width="40" height="40">By Tomas Pentikäinen, Finnish SEO strategist · 17 November 2026</p>
+  </div><div class="ah-cover" aria-hidden="true" style="background:linear-gradient(135deg,#0a0a0a 0%,#1f2937 60%,#007a99 100%)"><span lang="fi">kengät, kenkiä</span></div></div></div>
 </div>
 
 <main id="main">
@@ -430,6 +452,7 @@ html,body{overflow-x:hidden}
   </div>
   <figcaption>Figure 1. One English keyword branches into many Finnish searches. <i lang="fi">Lenkkarit</i> is the everyday word for trainers.</figcaption>
 </figure>
+<figure class="fig" lang="fi"><div class="sg" role="img" aria-label="Google.fi autocomplete suggestions for hammaslääkäri tampere"><div class="q"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 20 20"/></svg><span>hammaslääkäri tampere</span></div><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 20 20"/></svg><span>hammaslääkäri tampere</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 20 20"/></svg><span>hammaslääkäri tampere<b> ajanvaraus</b></span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 20 20"/></svg><span>hammaslääkäri tampere<b> julkinen</b></span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 20 20"/></svg><span>hammaslääkäri tampere<b> pirha</b></span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 20 20"/></svg><span>hammaslääkäri tampere<b> keskusta</b></span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 20 20"/></svg><span>hammaslääkäri tampere<b> hämeenkatu</b></span></li></ul></div><figcaption lang="en">Figure 2. Google.fi autocomplete for <i lang="fi">hammaslääkäri tampere</i> (dentist Tampere), 18 November 2026. Every suggestion is its own intent: booking (<i lang="fi">ajanvaraus</i>), public care (<i lang="fi">julkinen</i>), the city centre (<i lang="fi">keskusta</i>) and a street name.</figcaption></figure>
 <h2>Compounds hide the real keyword</h2>
 <p>English writes "car insurance" as two words. Finnish writes <em lang="fi">autovakuutus</em>. "Home insurance" is <em lang="fi">kotivakuutus</em>, and "delivery costs" is <em lang="fi">toimituskulut</em>.</p>
 <p>This trips up translated lists in two ways. A translation tool may split the compound into two words, which looks wrong to a Finn and matches almost no searches. And a tool search for the head word <em lang="fi">vakuutus</em> will not always surface the compounds that hold most of the demand. Each important compound needs its own check.</p>
@@ -443,6 +466,7 @@ html,body{overflow-x:hidden}
 <ol><li>Collect the topics from your English site and your sales team, as topics only, not as keywords.</li><li>Find the Finnish phrases people use for each topic, including inflected forms, compounds and everyday synonyms.</li><li>Check the live Finnish search results for each phrase to confirm the intent: are people looking to learn, compare or buy?</li><li>Group the variations that share an intent under one page, so you do not create competing pages for <em lang="fi">kenkä</em> and <em lang="fi">kengät</em>.</li><li>Map each group to a page, with the main phrase in the title, H1, URL and first paragraph.</li><li>Review the plan against Search Console data a month after launch, and add the phrases you missed.</li></ol>
 <p>The same work feeds AI search. ChatGPT, Claude, Perplexity and Google's AI Overviews answer Finnish questions from Finnish pages, and they quote the pages that answer clearly in the words people use.</p>
 <p>Keyword research is the first step of <a href="/finnish-seo/finnish-website-localization/">localizing a website for Finland</a>. Want to see what this looks like for your site? <a href="/finnish-seo/#check">Get a free Finnish search check</a> and I will send you the five Finnish searches you are missing.</p>
+<aside class="author" aria-label="About the author"><img src="/portfolio-tomas.jpg" alt="Tomas Pentikäinen, Finnish SEO specialist in Helsinki" width="76" height="76" loading="lazy"><p>I'm Tomas Pentikäinen, a native Finnish SEO strategist in Helsinki. I plan and write content that gets brands found in Finnish search and AI answers, for companies like Coinmotion and JD Sports and for MICHELIN Guide restaurants. <a href="/#about">More about me</a></p></aside>
   </article>
   <aside class="more" aria-label="More guides">
     <h2>More guides on SEO in Finland</h2>

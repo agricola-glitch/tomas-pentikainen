@@ -385,6 +385,28 @@ html,body{overflow-x:hidden}
 @media (max-width:640px){.cmp,.dec{grid-template-columns:1fr}}
 @media (max-width:640px){.art-hero{padding:120px 0 44px}.article{font-size:18px;padding-top:44px}}
 .nav .contact i{background:#00c2e8;color:#0a0a0a}.nav .contact:hover i{background:#00b2d6}
+
+/* guide visuals 2026-11-18: typographic cover, author byline + box, real Google.fi autocomplete, steps */
+.art-hero .ah{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:56px;align-items:center}
+.ah-cover{aspect-ratio:4/3;border-radius:22px;display:flex;align-items:flex-end;padding:28px 30px;color:#fff;font-weight:300;font-size:clamp(34px,3.6vw,56px);letter-spacing:-.03em;line-height:1;box-shadow:0 30px 60px -32px rgba(0,109,135,.5)}
+.byline{display:flex;align-items:center;gap:12px;margin:0}
+.byline img{width:40px;height:40px;border-radius:50%;object-fit:cover;object-position:50% 20%}
+.author{display:flex;gap:22px;align-items:center;background:var(--light);border-radius:20px;padding:24px 26px;margin:56px 0 8px}
+.author img{width:76px;height:76px;border-radius:50%;object-fit:cover;object-position:50% 20%;flex-shrink:0}
+.author p{margin:0!important;font-size:17px;line-height:1.5}
+.author a{color:var(--sky-ink)}
+.sg{max-width:580px;margin:0 auto;background:#fff;border-radius:26px;box-shadow:0 0 0 1px var(--line),0 24px 48px -28px rgba(0,0,0,.22);overflow:hidden;font-size:17px}
+.sg .q{display:flex;align-items:center;gap:14px;padding:15px 22px;border-bottom:1px solid var(--line)}
+.sg ul{list-style:none;margin:0;padding:8px 0}
+.sg li{display:flex;align-items:center;gap:14px;padding:8px 22px;margin:0}
+.sg svg{width:17px;height:17px;flex-shrink:0;color:rgba(10,10,10,.4)}
+.sg li b{font-weight:600}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.steps div{background:var(--light);border-radius:18px;padding:22px 20px}
+.steps b{display:block;font-weight:300;font-size:34px;letter-spacing:-.03em;color:#008cb0;margin:0 0 10px}
+.steps span{display:block;font-size:16px;line-height:1.4}
+@media (max-width:900px){.art-hero .ah{grid-template-columns:1fr;gap:32px}.ah-cover{aspect-ratio:16/9}.steps{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.author{flex-direction:column;align-items:flex-start}}
 </style>
 <script src="/consent.js" defer></script>
 <script src="/aurora.js?v=9" defer></script>
@@ -405,11 +427,11 @@ html,body{overflow-x:hidden}
 </header>
 
 <div class="art-hero" id="top">
-  <div class="wrap">
+  <div class="wrap"><div class="ah"><div>
     <p class="crumbs"><a href="/finnish-seo/">SEO in Finland</a> · Guide</p>
     <h1>How to localize a website for Finland</h1>
-    <p class="meta">By Tomas Pentikäinen, Finnish SEO strategist · 17 November 2026</p>
-  </div>
+    <p class="meta byline"><img src="/portfolio-tomas.jpg" alt="" width="40" height="40">By Tomas Pentikäinen, Finnish SEO strategist · 17 November 2026</p>
+  </div><div class="ah-cover" aria-hidden="true" style="background:linear-gradient(135deg,#006d87 0%,#00a6cc 60%,#8ee3f5 100%)"><span lang="fi">lokalisointi</span></div></div></div>
 </div>
 
 <main id="main">
@@ -430,6 +452,7 @@ html,body{overflow-x:hidden}
 <p>Consumer prices in Finland are shown with VAT included. The standard VAT rate has been <a href="https://www.vero.fi/en/businesses-and-corporations/taxes-and-charges/vat/rates-of-vat/" target="_blank" rel="noopener">25.5% since 1 September 2024</a>, so a price imported from a non-EU store without tax will look wrong at checkout.</p>
 <p>Format matters as well. Finns write <em lang="fi">29,90 €</em>, with a decimal comma and the euro sign after the number. Dates go day first (<em lang="fi">17.11.2026</em>), and times use a 24-hour clock with a dot (<em lang="fi">klo 18.30</em>).</p>
 <p>At checkout, offer the methods Finns already use. Online bank payments and MobilePay are everyday options next to cards, and many shoppers expect a choice of parcel lockers for delivery. A checkout that only accepts cards and home delivery loses buyers at the last step.</p>
+<figure class="fig" lang="fi"><div class="sg" role="img" aria-label="Google.fi autocomplete suggestions for verkkokauppa toimitus"><div class="q"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 20 20"/></svg><span>verkkokauppa toimitus</span></div><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 20 20"/></svg><span>verkkokauppa toimitus<b>aika</b></span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 20 20"/></svg><span>verkkokauppa toimitus<b>kulut</b></span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 20 20"/></svg><span>verkkokauppa toimitus</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 20 20"/></svg><span>verkkokauppa toimitus<b>aika kokemuksia</b></span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 20 20"/></svg><span>verkkokauppa toimitus<b> viivästynyt</b></span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 20 20"/></svg><span>verkkokauppa toimitus<b> tunnissa</b></span></li></ul></div><figcaption lang="en">Figure 1. Google.fi autocomplete for <i lang="fi">verkkokauppa toimitus</i> (online shop delivery), 18 November 2026. Before they buy, Finns search for delivery time (<i lang="fi">toimitusaika</i>), delivery costs (<i lang="fi">toimituskulut</i>) and delays (<i lang="fi">viivästynyt</i>).</figcaption></figure>
 <figure class="fig">
   <div class="cmp">
     <div class="cmp-col muted"><p class="cmp-h">Translated</p>
@@ -445,7 +468,7 @@ html,body{overflow-x:hidden}
       <p><b lang="fi">Anna sähköpostiosoitteesi</b><span>Form label, informal "sinä"</span></p>
     </div>
   </div>
-  <figcaption>Figure 1. The same checkout, translated and localized for Finland.</figcaption>
+  <figcaption>Figure 2. The same checkout, translated and localized for Finland.</figcaption>
 </figure>
 <h2>Decide early whether you need Swedish</h2>
 <p>Finland has two official languages, Finnish and Swedish. Swedish speakers are a small minority, concentrated on the west and south coasts and in Åland, so most brands should start with Finnish only.</p>
@@ -457,6 +480,7 @@ html,body{overflow-x:hidden}
 <ol><li>Each key page targets a Finnish search phrase that real people use.</li><li>The whole site uses one form of address, <em lang="fi">sinä</em> or <em lang="fi">te</em>.</li><li>Layouts are tested with real Finnish copy on mobile.</li><li>Prices include VAT and use Finnish number, date and time formats.</li><li>Checkout offers bank payments, MobilePay and parcel-locker delivery.</li><li>Hreflang, Finnish slugs and Finnish meta data are in place and indexed.</li></ol>
 <p>Localization is a one-off project only on paper. The first Finnish search data arrives a few weeks after launch, and that is when you see which pages people find and which phrases you missed. Plan a review for the first month.</p>
 <p>Planning a Finnish launch? <a href="/finnish-seo/#check">Get a free Finnish search check</a>: within a week you get the five Finnish searches your site misses and which page would win each one.</p>
+<aside class="author" aria-label="About the author"><img src="/portfolio-tomas.jpg" alt="Tomas Pentikäinen, Finnish SEO specialist in Helsinki" width="76" height="76" loading="lazy"><p>I'm Tomas Pentikäinen, a native Finnish SEO strategist in Helsinki. I plan and write content that gets brands found in Finnish search and AI answers, for companies like Coinmotion and JD Sports and for MICHELIN Guide restaurants. <a href="/#about">More about me</a></p></aside>
   </article>
   <aside class="more" aria-label="More guides">
     <h2>More guides on SEO in Finland</h2>

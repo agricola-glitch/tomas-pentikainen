@@ -396,6 +396,28 @@ html,body{overflow-x:hidden}
 @media (max-width:640px){.cmp,.dec{grid-template-columns:1fr}}
 @media (max-width:640px){.art-hero{padding:120px 0 44px}.article{font-size:18px;padding-top:44px}}
 .nav .contact i{background:#00c2e8;color:#0a0a0a}.nav .contact:hover i{background:#00b2d6}
+
+/* guide visuals 2026-11-18: typographic cover, author byline + box, real Google.fi autocomplete, steps */
+.art-hero .ah{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:56px;align-items:center}
+.ah-cover{aspect-ratio:4/3;border-radius:22px;display:flex;align-items:flex-end;padding:28px 30px;color:#fff;font-weight:300;font-size:clamp(34px,3.6vw,56px);letter-spacing:-.03em;line-height:1;box-shadow:0 30px 60px -32px rgba(0,109,135,.5)}
+.byline{display:flex;align-items:center;gap:12px;margin:0}
+.byline img{width:40px;height:40px;border-radius:50%;object-fit:cover;object-position:50% 20%}
+.author{display:flex;gap:22px;align-items:center;background:var(--light);border-radius:20px;padding:24px 26px;margin:56px 0 8px}
+.author img{width:76px;height:76px;border-radius:50%;object-fit:cover;object-position:50% 20%;flex-shrink:0}
+.author p{margin:0!important;font-size:17px;line-height:1.5}
+.author a{color:var(--sky-ink)}
+.sg{max-width:580px;margin:0 auto;background:#fff;border-radius:26px;box-shadow:0 0 0 1px var(--line),0 24px 48px -28px rgba(0,0,0,.22);overflow:hidden;font-size:17px}
+.sg .q{display:flex;align-items:center;gap:14px;padding:15px 22px;border-bottom:1px solid var(--line)}
+.sg ul{list-style:none;margin:0;padding:8px 0}
+.sg li{display:flex;align-items:center;gap:14px;padding:8px 22px;margin:0}
+.sg svg{width:17px;height:17px;flex-shrink:0;color:rgba(10,10,10,.4)}
+.sg li b{font-weight:600}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.steps div{background:var(--light);border-radius:18px;padding:22px 20px}
+.steps b{display:block;font-weight:300;font-size:34px;letter-spacing:-.03em;color:#008cb0;margin:0 0 10px}
+.steps span{display:block;font-size:16px;line-height:1.4}
+@media (max-width:900px){.art-hero .ah{grid-template-columns:1fr;gap:32px}.ah-cover{aspect-ratio:16/9}.steps{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.author{flex-direction:column;align-items:flex-start}}
 </style>
 <script src="/consent.js" defer></script>
 <script src="/aurora.js?v=9" defer></script>
@@ -416,11 +438,11 @@ html,body{overflow-x:hidden}
 </header>
 
 <div class="art-hero" id="top">
-  <div class="wrap">
+  <div class="wrap"><div class="ah"><div>
     <p class="crumbs"><a href="/finnish-seo/">SEO in Finland</a> · Guide</p>
     <h1>How to choose an SEO consultant for Finland</h1>
-    <p class="meta">By Tomas Pentikäinen, Finnish SEO strategist · 18 November 2026</p>
-  </div>
+    <p class="meta byline"><img src="/portfolio-tomas.jpg" alt="" width="40" height="40">By Tomas Pentikäinen, Finnish SEO strategist · 18 November 2026</p>
+  </div><div class="ah-cover" aria-hidden="true" style="background:linear-gradient(135deg,#007a99 0%,#00c2e8 60%,#e0f7fc 100%)"><span lang="fi">who to hire?</span></div></div></div>
 </div>
 
 <main id="main">
@@ -445,6 +467,7 @@ html,body{overflow-x:hidden}
 <h2>Check who writes the Finnish</h2>
 <p>This is where launches go wrong. Many international agencies sell "Finnish SEO" and route the language work to a translator or a freelancer you never meet. The keyword list arrives as translated English, and the pages read like a manual.</p>
 <p>Ask to see Finnish pages the person or team wrote themselves, and ask who will write yours. If the answer is a translation step, the keyword research will miss how Finns search. <a href="/finnish-seo/finnish-keyword-research/">Finnish keyword research</a> explains why translated keywords fail.</p>
+<figure class="fig" lang="fi"><div class="sg" role="img" aria-label="Google.fi autocomplete suggestions for hakukoneoptimointi"><div class="q"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 20 20"/></svg><span>hakukoneoptimointi</span></div><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 20 20"/></svg><span>hakukoneoptimointi</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 20 20"/></svg><span>hakukoneoptimointi<b> hinta</b></span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 20 20"/></svg><span>hakukoneoptimointi<b> yritykselle</b></span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 20 20"/></svg><span>hakukoneoptimointi<b> koulutus</b></span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 20 20"/></svg><span>hakukoneoptimointi<b> opas</b></span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 20 20"/></svg><span>hakukoneoptimointi<b> seo</b></span></li></ul></div><figcaption lang="en">Figure 2. Google.fi autocomplete for <i lang="fi">hakukoneoptimointi</i> (search engine optimization), 18 November 2026. Finnish buyers look for the price (<i lang="fi">hinta</i>), SEO for a company (<i lang="fi">yritykselle</i>), training and guides.</figcaption></figure>
 <h2>Questions to ask before you hire</h2>
 <ol><li>Who will do the work on my account, and are they native Finnish speakers?</li><li>Can you show Finnish pages you wrote and the search results they earned?</li><li>Where does your Finnish search data come from, and how do you handle the small volumes tools report for Finland?</li><li>What will you change in the first month, and how will we measure it?</li><li>Do you work with Google Search Console and GA4 directly, or only from tool estimates?</li><li>How do you check what ChatGPT, Claude and Google's AI Overviews say about our category?</li><li>Who owns the content, the reports and the accounts if we stop working together?</li></ol>
 <p>Good answers name people, show real examples and describe a first month in concrete steps. Vague answers about "proprietary methods" usually mean the work happens somewhere else.</p>
@@ -452,9 +475,11 @@ html,body{overflow-x:hidden}
 <ul><li>Guaranteed rankings or a promised position on Google.</li><li>A keyword list that is clearly translated from English.</li><li>Reports built only on third-party tool estimates, with no Search Console data.</li><li>Link packages sold by volume.</li><li>No named person who will do the work, or a sales contact who disappears after signing.</li></ul>
 <h2>What a good first month looks like</h2>
 <p>A useful first month for a brand entering Finland produces decisions, not a thick audit. Expect Finnish keyword research mapped to the pages you need, a short list of technical fixes in priority order (language versions, hreflang, indexing), a plan for the first Finnish pages, and access to Search Console set up so progress can be measured from real data. Within a few weeks of launch, the first Finnish search data shows which pages people find and which searches you still miss.</p>
+<figure class="fig"><div class="steps"><div><b>1</b><span>Finnish keyword research mapped to the pages you need</span></div><div><b>2</b><span>Technical fixes in priority order: language versions, hreflang, indexing</span></div><div><b>3</b><span>A plan for the first Finnish pages</span></div><div><b>4</b><span>Search Console set up, so progress is measured from real data</span></div></div><figcaption>Figure 3. What a useful first month delivers.</figcaption></figure>
 <h2>Compare on the work, not the pitch</h2>
 <p>Shortlist three to five options and ask each the same questions. Compare the answers, the examples and the first-month plan side by side. The right choice is usually the one that shows the most real Finnish work and the clearest plan, not the biggest name.</p>
 <p>If you want a quick sense of how a consultant works before committing, ask for a small paid or free piece of work first. I offer a <a href="/finnish-seo/#check">free Finnish search check</a>: within a week you get the five Finnish searches your site misses and which page would win each one.</p>
+<aside class="author" aria-label="About the author"><img src="/portfolio-tomas.jpg" alt="Tomas Pentikäinen, Finnish SEO specialist in Helsinki" width="76" height="76" loading="lazy"><p>I'm Tomas Pentikäinen, a native Finnish SEO strategist in Helsinki. I plan and write content that gets brands found in Finnish search and AI answers, for companies like Coinmotion and JD Sports and for MICHELIN Guide restaurants. <a href="/#about">More about me</a></p></aside>
   </article>
   <aside class="more" aria-label="More guides">
     <h2>More guides on SEO in Finland</h2>
