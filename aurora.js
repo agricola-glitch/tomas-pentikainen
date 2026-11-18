@@ -20,8 +20,10 @@
     // home (Tomas 2026-11-18): hero tinted; the "Experience at" strip and the work grid pure white;
     // "What I do" through "Results from client work" in one field; contact at the end
     home:    [{ from: '.hero', to: '.hero', fadeTop: 0, fadeBottom: 0.35, strength: 0.75 },
-              { from: '#do', to: '#results', fadeTop: 0.22, fadeBottom: 0.22, strength: 0.8 },
-              { from: '#about', to: '#about', fadeTop: 0.3, fadeBottom: 0.3, strength: 0.8 },
+              { from: '#do', to: '#do', pad: 180, fadeTop: 0.45, fadeBottom: 0.45, strength: 0.85 },
+              // "Senior work, without the agency overhead" (#how) stays white between these two
+              { from: '#results', to: '#results', pad: 180, fadeTop: 0.45, fadeBottom: 0.45, strength: 0.85 },
+              { from: '#about', to: '#about', pad: 120, fadeTop: 0.35, fadeBottom: 0.35, strength: 0.8 },
               { from: '#contact', to: 'footer', fadeTop: 0.55, fadeBottom: 0, strength: 0.8 }],
     landing: [{ from: '.lp-hero', to: '#why', fadeTop: 0, fadeBottom: 0.45, strength: 0.75 },
               { from: '#contact', to: 'footer', fadeTop: 0.55, fadeBottom: 0, strength: 0.8 }],
@@ -65,8 +67,9 @@
     var ctx = cv.getContext('2d'), W = 0, H = 0, blobs = [];
 
     function place() {
-      var top = a.getBoundingClientRect().top + scrollY;
-      var bottom = b.getBoundingClientRect().bottom + scrollY + (spec.extend || 0);
+      // `pad` lets a short section's field reach past its edges so the fades can be long
+      var top = a.getBoundingClientRect().top + scrollY - (spec.pad || 0);
+      var bottom = b.getBoundingClientRect().bottom + scrollY + (spec.extend || 0) + (spec.pad || 0);
       var h = Math.max(200, bottom - top);
       box.style.top = top + 'px';
       box.style.height = h + 'px';
