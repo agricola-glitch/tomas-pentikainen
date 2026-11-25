@@ -294,6 +294,54 @@ html,body{overflow-x:hidden}
 .qs-static{display:none;list-style:none;margin:12px 0 0;padding:0;font-size:15px;line-height:1.7}
 .qs-static a{color:var(--ink-50)}
 .no-js .qs-box,.no-js .qs-note,.no-js .qs-dots{display:none}.no-js .qs-static{display:block}
+
+/* RESULTS VIZ (motion cards) */
+#results .numbers>div{display:flex;flex-direction:column;align-items:center}
+#results .numbers .viz{padding:0;display:block}
+.viz{width:100%;max-width:260px;height:132px;margin:0 auto 26px;border-radius:16px;background:#fff;border:1px solid var(--line);box-shadow:0 1px 2px rgba(10,10,10,.04),0 12px 32px -18px rgba(0,120,150,.28);position:relative;overflow:hidden;text-align:left}
+.viz svg{display:block;width:100%;height:100%}
+.viz .cap{position:absolute;left:14px;top:11px;font-size:10.5px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-50)}
+/* 1: clicks line */
+.v-line .ln{fill:none;stroke:#00c2e8;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:420;stroke-dashoffset:420}
+.v-line .ar{opacity:0}
+.v-line .ly{fill:none;stroke:rgba(10,10,10,.16);stroke-width:1.4;stroke-dasharray:3 4}
+.v-line .dot{fill:#00c2e8;opacity:0}
+.v-line .halo{fill:#00c2e8;opacity:0;transform-origin:236px 50px}
+/* 2: serp climb */
+.v-serp .row{position:absolute;left:14px;right:14px;height:9px;border-radius:5px;background:rgba(10,10,10,.07)}
+.v-serp .me{position:absolute;left:14px;right:40px;height:9px;border-radius:5px;background:#00c2e8;top:42px;transform:translateY(72px);opacity:.35}
+.v-serp .pg{position:absolute;right:12px;top:9px;display:flex;gap:4px}
+.v-serp .pg i{width:18px;height:18px;border-radius:50%;display:grid;place-items:center;font:500 10px/1 var(--font);font-style:normal;color:var(--ink-50);background:rgba(10,10,10,.05)}
+.v-serp .pg i.p3{background:#0a0a0a;color:#fff}
+/* 3: ai answer quote */
+.v-ai .qt{position:absolute;left:14px;right:14px;top:47px;margin:0;text-align:left;font:400 14px/1.45 var(--font);color:var(--ink);opacity:0;transform:translateY(6px)}
+.v-ai mark{background:linear-gradient(rgba(0,194,232,.42),rgba(0,194,232,.42)) left 85%/0% 42% no-repeat;color:inherit;padding:0 1px}
+
+/* play when the row is revealed */
+#results .numbers.in .v-line .ln{animation:vDraw 1.8s .2s cubic-bezier(.45,.05,.2,1) forwards}
+#results .numbers.in .v-line .ar{animation:vFade 1s 1.2s ease forwards}
+#results .numbers.in .v-line .dot{animation:vFade .3s 1.9s ease forwards}
+#results .numbers.in .v-line .halo{animation:vPulse 2.4s 2s ease-out infinite}
+#results .numbers.in .v-serp .me{animation:vClimb 2.2s .5s cubic-bezier(.6,0,.2,1) forwards}
+#results .numbers.in .v-serp .pg i.p3{animation:vP3 2.2s .5s steps(1) forwards}
+#results .numbers.in .v-serp .pg i.p2{animation:vP2 2.2s .5s steps(1) forwards}
+#results .numbers.in .v-serp .pg i.p1{animation:vP1 2.2s .5s steps(1) forwards}
+#results .numbers.in .v-ai .qt{animation:vRise .6s .8s ease forwards}
+#results .numbers.in .v-ai mark{animation:vMark .8s 1.7s cubic-bezier(.3,0,.2,1) forwards}
+@keyframes vMark{to{background-size:100% 42%}}
+@keyframes vDraw{to{stroke-dashoffset:0}}
+@keyframes vFade{to{opacity:1}}
+@keyframes vPulse{0%{opacity:.35;transform:scale(1)}70%,100%{opacity:0;transform:scale(2.6)}}
+@keyframes vClimb{0%{transform:translateY(72px);opacity:.35}45%{transform:translateY(32px);opacity:.6}100%{transform:translateY(0);opacity:1}}
+@keyframes vP3{0%{background:#0a0a0a;color:#fff}45%,100%{background:rgba(10,10,10,.05);color:var(--ink-50)}}
+@keyframes vP2{0%{}45%{background:#0a0a0a;color:#fff}100%{background:rgba(10,10,10,.05);color:var(--ink-50)}}
+@keyframes vP1{0%,99%{}100%{background:#00c2e8;color:#0a0a0a}}
+@keyframes vRise{to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){
+  .v-line .ln{stroke-dashoffset:0}.v-line .ar,.v-line .dot,.v-ai .qt{opacity:1;transform:none}.v-ai mark{background-size:100% 42%}
+  .v-serp .me{transform:none;opacity:1}.v-serp .pg i.p3{background:rgba(10,10,10,.05);color:var(--ink-50)}.v-serp .pg i.p1{background:#00c2e8;color:#0a0a0a}
+  #results .numbers.in .viz *{animation:none!important}
+}
 </style>
 <script src="/consent.js" defer></script>
 <script data-goatcounter="https://tomaspentikainen.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
@@ -421,9 +469,20 @@ html,body{overflow-x:hidden}
   <div class="wrap">
     <div class="statement"><h2 id="res-h" class="rv">Results from <strong>client work</strong>.</h2></div>
     <div class="numbers rv">
-      <div><b>+76%</b><span>non-branded Google clicks in a single year</span></div>
-      <div><b>3 → 1</b><span>from page three to page one on core search terms</span></div>
-      <div><b>#1</b><span>top recommendation in AI answers for a core category</span></div>
+      <div><div class="viz v-line" aria-hidden="true"><span class="cap">Non-branded clicks</span>
+        <svg viewBox="0 0 260 132" preserveAspectRatio="none"><defs><linearGradient id="vg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#00c2e8" stop-opacity=".28"/><stop offset="1" stop-color="#00c2e8" stop-opacity="0"/></linearGradient></defs>
+        <path class="ly" d="M14 104 L236 98"/>
+        <path class="ar" fill="url(#vg)" d="M14 104 C40 102 52 98 70 99 S100 90 118 88 S150 80 166 72 S200 60 236 50 L236 132 L14 132 Z"/>
+        <path class="ln" d="M14 104 C40 102 52 98 70 99 S100 90 118 88 S150 80 166 72 S200 60 236 50"/>
+        <circle class="halo" cx="236" cy="50" r="5"/><circle class="dot" cx="236" cy="50" r="4"/></svg></div>
+      <b>+76%</b><span>non-branded Google clicks in a single year</span></div>
+      <div><div class="viz v-serp" aria-hidden="true"><span class="cap">Google results</span><span class="pg"><i class="p1">1</i><i class="p2">2</i><i class="p3">3</i></span>
+        <span class="row" style="top:42px"></span><span class="row" style="top:58px;right:60px"></span><span class="row" style="top:74px;right:34px"></span><span class="row" style="top:90px;right:76px"></span><span class="row" style="top:106px;right:48px"></span>
+        <span class="me"></span></div>
+      <b>3 → 1</b><span>from page three to page one on core search terms</span></div>
+      <div><div class="viz v-ai" aria-hidden="true"><span class="cap">AI answer · example</span>
+        <p class="qt">“The option <mark>most often recommended</mark> is a local service with clear answers in your own language.”</p></div>
+      <b>#1</b><span>top recommendation in AI answers for a core category</span></div>
     </div>
     <p class="numbers-note rv">Most of the pages and articles behind these numbers I wrote myself.</p>
   </div>
