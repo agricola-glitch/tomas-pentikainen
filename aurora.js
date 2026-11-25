@@ -109,16 +109,28 @@
       }
     }
     place(); draw(t0 + index * 9000);
-    var visible = false, raf = 0;
-    function loop(now) { draw(now); if (visible && !still) raf = requestAnimationFrame(loop); }
+    // The fields drift very slowly, so ~12 redraws a second look the same as 60 and cost a
+    // fraction (each redraw re-runs the CSS blur over the whole field). Motion starts only
+    // after the page has loaded, and stops while the tab is hidden or the field is off-screen.
+    var visible = false, raf = 0, last = 0, FRAME = 1000 / 12;
+    function loop(now) {
+      if (now - last >= FRAME) { last = now; draw(now); }
+      if (visible && started && !document.hidden && !still) raf = requestAnimationFrame(loop);
+    }
+    function kick() { cancelAnimationFrame(raf); if (visible && started && !document.hidden && !still) raf = requestAnimationFrame(loop); }
     if (!still && 'IntersectionObserver' in window) {
-      new IntersectionObserver(function (es) {
-        visible = es[0].isIntersecting; cancelAnimationFrame(raf);
-        if (visible) raf = requestAnimationFrame(loop);
-      }, { rootMargin: '200px' }).observe(box);
+      new IntersectionObserver(function (es) { visible = es[0].isIntersecting; kick(); }, { rootMargin: '200px' }).observe(box);
+      document.addEventListener('visibilitychange', kick);
+      kicks.push(kick);
     }
     return { place: function () { place(); draw(performance.now()); } };
   }
+
+  // Animation waits for the load event plus a short idle moment, so it never competes with first paint.
+  var started = false, kicks = [];
+  function start() { started = true; for (var k = 0; k < kicks.length; k++) kicks[k](); }
+  function startLater() { (window.requestIdleCallback || function (f) { setTimeout(f, 1200); })(start, { timeout: 2500 }); }
+  if (document.readyState === 'complete') startLater(); else addEventListener('load', startLater);
 
   function init() {
     document.documentElement.classList.add('js-aurora');
